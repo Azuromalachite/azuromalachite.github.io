@@ -15,9 +15,11 @@ After graduating from KVIS, I interned at VISTEC with Chayasith Uttamapinant, wh
 
 Today, my research focuses on developing tools and methods for microbiome engineering, using approaches that span protein mining, anaerobic cultivation, long-read sequencing, laboratory automation, and computational biology. More broadly, I am interested in how biological systems function, interact, and evolve across scales, from proteins to microbial communities, and in how biological engineering can draw more deeply on the ecological and evolutionary properties of living systems.
 
-> The first generation of scientists with the tools to address the dimensions of biodiversity on Earth might also be the last with the opportunity to do so.
+> We are the first generation of scientists with the tools to address the dimensions of biodiversity on Earth…and ironically we may be the last generation with the opportunity to discover and understand Earth’s biodiversity before it is irrevocably changed or lost.
 >
-> — Adapted from James P. Collins, 13 February 2009, as recorded in the [National Research Council symposium report](https://www.nationalacademies.org/read/13109/chapter/3), p. 11 (2011).
+> — James Collins, February 13, 2009
+
+National Academies of Sciences, Engineering, and Medicine. 2011. *Twenty-First Century Ecosystems: Managing the Living World Two Centuries After Darwin: Report of a Symposium*. Washington, DC: The National Academies Press. [https://doi.org/10.17226/13109](https://doi.org/10.17226/13109).
 
 That idea resonates strongly with how I think about biology. The molecular tools now available to us make it possible to study biological diversity at extraordinary resolution, but understanding that diversity also requires paying attention to organisms, their environments, and their evolutionary histories.
 
