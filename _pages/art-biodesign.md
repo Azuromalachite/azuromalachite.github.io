@@ -22,7 +22,7 @@ I first developed the idea as a workshop for **Intimacy with Nature** in Singapo
 
 ### Intimacy with Nature
 
-I later became involved with Henry and the **FREAK Lab** community through **Intimacy with Nature**, a nomadic art–science platform exploring relationships among biotechnology, ecology, biodiversity, and human activity. For its 2023 Singapore chapter at the Singapore Art Museum, I joined as a biologist and co-organizer of a five-day bio-art workshop bringing together artists, scientists, designers, and community-biology practitioners.
+Through my collaboration with artist Henry Tan, I became involved with the **FREAK Lab** community and **Intimacy with Nature**, a nomadic art–science platform exploring relationships among biotechnology, ecology, biodiversity, and human activity. For its 2023 Singapore chapter at the Singapore Art Museum, I joined as a biologist and co-organizer of a five-day bio-art workshop bringing together artists, scientists, designers, and community-biology practitioners.
 
 ### Happy Ending
 

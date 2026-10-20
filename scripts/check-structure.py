@@ -30,8 +30,8 @@ def page(route):
 expected=[('/', 'About'),('/research/','Research'),('/natural-history/','Natural History'),('/art-biodesign/','Art & Biodesign'),('/teaching/','Teaching & Community'),('/cv/','CV')]
 home=page('/')
 assert home.nav_links[1:]==expected,home.nav_links
-assert [title for level,title in home.headings if level=='h2']==['Background','Life in context','Beyond research']
-assert [title for level,title in home.headings if level=='h3']==['Natural history','Art & biodesign','Teaching & community']
+# Preserve the three parallel teasers without freezing editorial wording.
+assert [level for level,_ in home.headings]==['h2','h2','h2','h3','h3','h3'],home.headings
 for route,_ in expected:
     assert route in home.links,route
 research=page('/research/')
@@ -40,10 +40,10 @@ for slug in ['2020-cas13-clinical-validation','2022-metagenomic-pet-hydrolase','
     assert '/publications/'+slug+'/' in research.links
 natural=page('/natural-history/')
 assert 'https://www.inaturalist.org/people/austintw' in natural.links
+assert 'https://ebird.org/profile/OTA2MjI5' in natural.links
 assert all(link and '{{' not in link for link in natural.links)
 art=page('/art-biodesign/')
-assert [title for level,title in art.headings if level=='h2']==["Molecular Soundtrack: Designing Proteins with IU's Song Titles",'Collaborations','Visual design'],art.headings
-assert [title for level,title in art.headings if level=='h3']==['Intimacy with Nature','Happy Ending','Phantom Dining']
+assert [level for level,_ in art.headings]==['h2','h2','h3','h3','h3','h2'],art.headings
 cv=page('/cv/')
 assert '/teaching/' in cv.links and '/natural-history/' in cv.links and '/publications/' in cv.links
 print('Navigation, parallel homepage teasers, research-publication links, art hierarchy, and CV cross-links passed.')
