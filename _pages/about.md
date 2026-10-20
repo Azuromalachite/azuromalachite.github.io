@@ -3,50 +3,32 @@ description: "Thanakrit (Austin) Wongsatit is a PhD student at KAIST developing 
 seo_title: "Thanakrit (Austin) Wongsatit — Microbiome Engineering at KAIST"
 permalink: /
 title: "Thanakrit (Austin) Wongsatit"
-author_profile: true
+layout: home-editorial
+author_profile: false
 redirect_from:
   - /about/
   - /about.html
 ---
 
-I develop experimental and computational tools for microbiome engineering as a PhD student at KAIST in Daejeon, South Korea. I work in the Graduate School of Engineering Biology under the supervision of Professor Sung Sun Yim.
-
-My approaches span protein mining, anaerobic cultivation, long-read sequencing, laboratory automation, and computational biology. More broadly, I am interested in how biological systems function, interact, and evolve across scales, from proteins to microbial communities, and in how biological engineering can draw more deeply on the ecological and evolutionary properties of living systems.
-
-[Research overview]({{ '/research/' | relative_url }}) · [Publications]({{ '/publications/' | relative_url }}) · [CV]({{ '/cv/' | relative_url }})
-
-## Background
-
-Originally from Thailand, I hold a B.S. in Bio and Brain Engineering, with a minor in Biological Science, from KAIST.
-
-My scientific journey began during high school at Kamnoetvidya Science Academy (KVIS) in Wang Chan Valley, Rayong, next to the Vidyasirimedhi Institute of Science and Technology (VISTEC). A molecular docking workshop there first introduced me to proteins as nanoscale molecular entities that could be visualized and explored on a computer. Around the same time, Jason Chin’s 2018 seminar at VISTEC on genetic code expansion fascinated me with the possibility of experimentally extending something as evolutionarily conserved as the genetic code.
-
-After graduating from KVIS, I interned at VISTEC with Chayasith Uttamapinant, where I worked on protein characterization for CRISPR diagnostics and metagenomic mining for novel plastic-degrading enzymes. In early 2020, I also took a semester-long leave of absence from KAIST to help establish a CRISPR diagnostics platform in Thailand, which led to my first contribution to a scientific publication. I later returned to VISTEC as a research assistant in 2024, working on microscopy image processing and analysis for protein phase-separation systems.
-
-## A wider biological perspective
-
-> "We are the first generation of scientists with the tools to address the dimensions of biodiversity on Earth…and ironically we may be the last generation with the opportunity to discover and understand Earth’s biodiversity before it is irrevocably changed or lost."
-
-*— James P. Collins, 13 February 2009, as recorded in the [National Research Council symposium report](https://www.nationalacademies.org/read/13109/chapter/3), p. 11 (2011).*
-
-That idea resonates strongly with how I think about biology. The molecular tools now available to us make it possible to study biological diversity at extraordinary resolution, but understanding that diversity also requires paying attention to organisms, their environments, and their evolutionary histories.
-
-## Across biology, design, and community
-
-### Natural history
-
-I study the taxonomy and natural history of Southeast Asian blue-banded bees (*Amegilla*), bringing together field observation, photography, historical literature, and conversations with wild-bee researchers in Thailand.
-
-[Explore natural history]({{ '/natural-history/' | relative_url }}).
-
-### Art & biodesign
-
-My creative practice includes Molecular Soundtrack, collaborations with Henry Tan and the FREAK Lab community, and visual design for scientific communication.
-
-[Explore art, biodesign, and collaborative practice]({{ '/art-biodesign/' | relative_url }}).
-
-### Teaching & community
-
-I contribute to How to Grow (Almost) Anything as a Global TA and have been involved in BioXCepTion workshops, protein-design teaching, and Thai SynBio Challenge 2026.
-
-[Explore teaching and community]({{ '/teaching/' | relative_url }}).
+<section class="hero" aria-labelledby="intro-title"><div><p class="eyebrow">Engineering biology / natural history / design</p><h1 id="intro-title">Tools for<br>microbial life.<br><span class="serif"><em>A wider biological<br>perspective.</em></span></h1><p class="intro">I develop experimental and computational tools for microbiome engineering at KAIST. Ecology, evolution, and the diversity of living systems shape how I approach that work.</p><div class="inline-links"><a href="{{ '/research/' | relative_url }}">Explore research ↗</a><a href="{{ '/publications/' | relative_url }}">Publications ↗</a></div></div>
+<aside class="practice-map" aria-label="A connected scientific practice"><div class="map-title meta"><span>A connected practice</span><span>Field / lab / studio</span></div>
+<svg viewBox="0 0 440 310" role="img" aria-labelledby="diagram-title diagram-desc"><title id="diagram-title">Connections across a scientific practice</title><desc id="diagram-desc">A conceptual diagram connecting molecular tools, microbial communities, natural history, and creative practice. It represents interests rather than measured biological relationships.</desc><g fill="none" stroke="#aab29d" stroke-width="1"><path d="M78 68C190 68 238 78 315 113S270 215 170 236S57 189 78 68Z"/><path d="M78 68L170 236L315 113M78 68L315 113"/><circle cx="78" cy="68" r="34"/><circle cx="315" cy="113" r="58"/><circle cx="170" cy="236" r="44"/></g><g fill="#36583f"><circle cx="78" cy="68" r="4"/><circle cx="315" cy="113" r="5"/><circle cx="170" cy="236" r="4"/></g><g font-size="12"><text x="13" y="17">Molecular tools</text><text x="257" y="31">Microbial communities</text><text x="242" y="251">Natural history</text></g><g font-size="10" fill="#586158"><text x="10" y="131">Protein mining</text><text x="10" y="147">Computation</text><text x="275" y="187">Cultivation / sequencing</text><text x="10" y="236">Observation</text><text x="10" y="252">Classification</text></g><path d="M324 283H407" stroke="#36583f"/><text x="324" y="304" font-size="11">Art &amp; design</text></svg>
+<p class="diagram-caption">Different scales, shared habits: observing variation, finding relationships, and building ways to ask better questions.</p><div class="location"><span>PhD · Engineering Biology<br>KAIST, South Korea</span><span>Originally from Thailand<br>Based in Daejeon</span></div></aside></section>
+<section class="practice-list" aria-labelledby="practice-title"><div class="section-heading"><span class="section-index">Fields of practice</span><h2 id="practice-title">In the lab. In the field. In between.</h2></div>
+<a class="practice-row" href="{{ '/research/' | relative_url }}"><span class="number">01</span><h3>Research<span class="tag">Experimental + computational</span></h3><p>Tools and methods for microbiome engineering, informed by biological variation and context.</p><span class="arrow" aria-hidden="true">↗</span></a>
+<a class="practice-row" href="{{ '/natural-history/' | relative_url }}"><span class="number">02</span><h3>Natural History<span class="tag">Organisms + environments</span></h3><p>Southeast Asian blue-banded bees, taxonomic questions, and a practice of looking closely.</p><span class="arrow" aria-hidden="true">↗</span></a>
+<a class="practice-row" href="{{ '/art-biodesign/' | relative_url }}"><span class="number">03</span><h3>Art &amp; Biodesign<span class="tag">Molecular + cultural</span></h3><p>Predicted molecular forms, collaborative experiments, and visual systems grounded in biology.</p><span class="arrow" aria-hidden="true">↗</span></a>
+<a class="practice-row" href="{{ '/teaching/' | relative_url }}"><span class="number">04</span><h3>Teaching &amp; Community<span class="tag">Knowledge + participation</span></h3><p>Workshops, HTGAA, and recurring spaces for scientific exchange across institutions.</p><span class="arrow" aria-hidden="true">↗</span></a></section>
+<section class="work-section" aria-labelledby="work-title"><div class="section-heading"><span class="section-index">Selected research</span><h2 id="work-title">From biological diversity to useful tools.</h2></div><div class="work-list">
+{% assign selected = site.publications | where: 'selected_home', true | sort: 'year' | reverse %}
+{% for paper in selected %}
+<article class="work"><span class="year">{{ paper.year }}</span><div>
+<h3><a href="{{ paper.url | relative_url }}">{{ paper.homepage_title | default: paper.title | escape }} <span aria-hidden="true">↗</span></a></h3>
+<div class="meta">{{ paper.venue | escape }} · {% if paper.co_first_author %}Co-first author{% elsif paper.publication_type == 'Review' %}First-author review{% else %}{{ paper.publication_type | escape }}{% endif %}</div>
+{% if paper.contribution_summary %}<p>{{ paper.contribution_summary | escape }}</p>{% elsif paper.publication_summary %}<p>{{ paper.publication_summary | escape }}</p>{% endif %}
+</div></article>
+{% endfor %}
+<p class="work-tail"><a href="{{ '/publications/' | relative_url }}">Complete publication list &amp; bibliography ↗</a></p></div></section>
+<section class="about-strip" aria-labelledby="about-title"><h2 id="about-title">A little background</h2><div><p>Originally from Thailand, I came to molecular biology through a high-school docking workshop—and the realization that proteins could be visualized and explored.</p><p class="small">I studied Bio and Brain Engineering at KAIST and worked at VISTEC on CRISPR diagnostics, plastic-degrading enzymes, and microscopy analysis. Today, I work with Professor Sung Sun Yim in KAIST’s Graduate School of Engineering Biology.</p><details class="full-biography" id="biography"><summary>Read the full biography</summary><div class="biography-content">
+{% capture biography %}{% include home-biography.md %}{% endcapture %}{{ biography | markdownify }}
+</div></details></div></section>

@@ -32,7 +32,16 @@ footer_ratio=contrast(footer['color'],footer['background-color'])
 assert nav_ratio>=4.5,nav_ratio
 assert footer_ratio>=4.5,footer_ratio
 assert float(declarations('.page__title')['line-height'])>=1.15
-home=Path('_site/index.html').read_text(encoding='utf-8')
-assert 'aria-label="Toggle navigation menu"' in home
+inner=Path('_site/research/index.html').read_text(encoding='utf-8')
+assert 'aria-label="Toggle navigation menu"' in inner
 assert '.greedy-nav button:focus-visible' in css
+home=Path('_site/index.html').read_text(encoding='utf-8')
+assert 'aria-controls="navigation"' in home and 'aria-expanded="false"' in home
+home_css=Path('_site/assets/css/home.css').read_text(encoding='utf-8')
+tokens=dict(re.findall(r'--([\w-]+):\s*(#[0-9a-fA-F]{6})',home_css))
+for name in ['ink','muted','green']:
+    assert contrast(tokens[name],tokens['paper'])>=4.5,name
+assert contrast(tokens['muted'],tokens['wash'])>=4.5
+assert ':focus-visible' in home_css and 'prefers-reduced-motion' in home_css
+assert 'Escape' in Path('_site/assets/js/home.js').read_text(encoding='utf-8')
 print(f'Navigation contrast {nav_ratio:.2f}:1; footer contrast {footer_ratio:.2f}:1; heading spacing and menu label passed.')

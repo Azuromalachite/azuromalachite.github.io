@@ -16,6 +16,8 @@ co_first_author: true
 contribution_note: "These authors contributed equally."
 publication_summary: "Discovery of a PET hydrolase from the human saliva metagenome, followed by genetic code expansion to extend its functionality."
 contribution_summary: "I contributed to the metagenomic enzyme-discovery work."
+selected_home: true
+homepage_title: "A PET hydrolase from the human saliva metagenome"
 share: false
 comments: false
 ---
