@@ -33,7 +33,7 @@ expected=[('/', 'About'),('/research/','Research'),('/natural-history/','Natural
 home=page('/')
 assert home.first_heading=='h1'
 assert '/publications/' in home.links
-assert home.nav_links[1:]==expected[1:],home.nav_links
+assert home.nav_links==expected[1:],home.nav_links
 home_html=Path('_site/index.html').read_text(encoding='utf-8')
 assert home_html.count('<h1 ')==1
 assert home_html.count('class="practice-row"')==4
