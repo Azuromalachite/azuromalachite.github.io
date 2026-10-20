@@ -10,20 +10,24 @@ My research sits at the intersection of microbial ecology, evolution, and biolog
 
 [Browse all publications]({{ '/publications/' | relative_url }}) · [Download BibTeX]({{ '/files/publications.bib' | relative_url }}) · [View my CV]({{ '/cv/' | relative_url }})
 
-## Microbiome engineering
+## Current work
+
+### Microbiome engineering
 
 As a PhD student in the Graduate School of Engineering Biology at KAIST, working under the supervision of Professor Sung Sun Yim, I develop tools and methods for microbiome engineering. My approaches span protein mining, anaerobic cultivation, long-read sequencing, laboratory automation, and computational biology.
 
 Across these approaches, I am interested in biological variation and context: why the same system behaves differently across hosts and environments, how those differences arise through evolution, and what they mean for biological engineering.
 
-## Natural diversity and protein engineering
+## Previous work
+
+### Protein discovery and engineering
 
 My previous work at VISTEC included metagenomic mining of plastic-degrading enzymes, sequence and structural analysis, and protein characterization. This connects an interest in natural biological diversity with opportunities for understanding and engineering molecular function.
 
 - [PET hydrolase discovery and genetic code expansion (2022)]({{ '/publications/2022-metagenomic-pet-hydrolase/' | relative_url }})
 - [Enzymes, auxiliaries and cells for PET recycling and upcycling (2024 review)]({{ '/publications/2024-pet-recycling-upcycling-review/' | relative_url }})
 
-## Diagnostics and biomolecular condensates
+### Molecular tools for nucleic-acid amplification and diagnostics
 
 I contributed to efforts to establish a CRISPR diagnostics platform in Thailand, including protein characterization for nucleic-acid detection. I later worked on microscopy image processing and analysis for protein phase-separation systems involved in DNA amplification.
 

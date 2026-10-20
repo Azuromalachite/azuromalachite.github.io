@@ -25,11 +25,11 @@ After graduating from KVIS, I interned at VISTEC with Chayasith Uttamapinant, wh
 
 > "We are the first generation of scientists with the tools to address the dimensions of biodiversity on Earth…and ironically we may be the last generation with the opportunity to discover and understand Earth’s biodiversity before it is irrevocably changed or lost."
 
-*— James Collins, 13 February 2009, as recorded in the [National Research Council symposium report](https://www.nationalacademies.org/read/13109/chapter/3), p. 11 (2011).*
+*— James P. Collins, 13 February 2009, as recorded in the [National Research Council symposium report](https://www.nationalacademies.org/read/13109/chapter/3), p. 11 (2011).*
 
 That idea resonates strongly with how I think about biology. The molecular tools now available to us make it possible to study biological diversity at extraordinary resolution, but understanding that diversity also requires paying attention to organisms, their environments, and their evolutionary histories.
 
-## Beyond research
+## Other strands
 
 ### Natural history
 
