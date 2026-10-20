@@ -1,7 +1,7 @@
 ---
 description: "Review of enzyme discovery and engineering, auxiliary processes, and microbial systems for PET recycling and upcycling, coauthored by Thanakrit Wongsatit."
 layout: "single"
-title: "Enzymes, auxiliaries and cells for the recycling and upcycling of polyethylene terephthalate (PET)"
+title: "Enzymes, auxiliaries, and cells for the recycling and upcycling of polyethylene terephthalate"
 collection: "publications"
 category: "manuscripts"
 permalink: "/publications/2024-pet-recycling-upcycling-review/"

@@ -25,7 +25,7 @@ Across these approaches, I am interested in biological variation and context: wh
 My previous work at VISTEC included metagenomic mining of plastic-degrading enzymes, sequence and structural analysis, and protein characterization. This connects an interest in natural biological diversity with opportunities for understanding and engineering molecular function.
 
 - [PET hydrolase discovery and genetic code expansion (2022)]({{ '/publications/2022-metagenomic-pet-hydrolase/' | relative_url }})
-- [Enzymes, auxiliaries and cells for PET recycling and upcycling (2024 review)]({{ '/publications/2024-pet-recycling-upcycling-review/' | relative_url }})
+- [Enzymes, auxiliaries, and cells for PET recycling and upcycling (2024 review)]({{ '/publications/2024-pet-recycling-upcycling-review/' | relative_url }})
 
 ### Molecular tools for nucleic-acid amplification and diagnostics
 
