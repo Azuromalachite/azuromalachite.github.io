@@ -1,4 +1,5 @@
 ---
+description: "Art and biodesign collaborations by Austin Wongsatit, including Molecular Soundtrack, Intimacy with Nature, Happy Ending, Phantom Dining, and visual design."
 layout: single
 title: "Art, Biodesign & Collaborative Practice"
 permalink: /art-biodesign/

@@ -1,4 +1,5 @@
 ---
+description: "Research on phase separation in recombinase polymerase amplification and CRISPR diagnostics. Equal-contributing author: Thanakrit Wongsatit."
 layout: "single"
 title: "Recombinase-Controlled Multiphase Condensates Accelerate Nucleic Acid Amplification and CRISPR-Based Diagnostics"
 collection: "publications"

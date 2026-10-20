@@ -1,4 +1,5 @@
 ---
+description: "Discovery of the MG8 PET hydrolase from the human saliva metagenome and its repurposing through genetic code expansion. Equal-contributing author: Thanakrit Wongsatit."
 layout: "single"
 title: "Discovery and Genetic Code Expansion of a Polyethylene Terephthalate (PET) Hydrolase from the Human Saliva Metagenome for the Degradation and Bio-Functionalization of PET"
 collection: "publications"

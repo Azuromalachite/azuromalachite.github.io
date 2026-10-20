@@ -135,13 +135,20 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 :  # Open Graph/Twitter default site image
+og_image                 : "social-preview.png"
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+  type: Person
+  name: "Thanakrit Wongsatit"
+  alternate_names:
+    - "Austin Wongsatit"
+    - "Thanakrit (Austin) Wongsatit"
+  links:
+    - "https://scholar.google.com/citations?user=ejfOOWAAAAAJ&hl=en"
+    - "https://www.linkedin.com/in/thanakrit-wongsatit-59a540125/"
+    - "https://github.com/Azuromalachite"
+    - "https://bsky.app/profile/austintw.bsky.social"
 
 
 # Analytics
@@ -157,6 +164,28 @@ include:
   - _pages
   - files
 exclude:
+  - scripts
+  # Do not publish unused template pages, sample downloads, or generation tools.
+  - _pages/archive-layout-with-content.md
+  - _pages/category-archive.html
+  - _pages/collection-archive.html
+  - _pages/markdown.md
+  - _pages/non-menu-page.md
+  - _pages/page-archive.html
+  - _pages/portfolio.html
+  - _pages/tag-archive.html
+  - _pages/talkmap.html
+  - _pages/talks.html
+  - _pages/terms.md
+  - _pages/year-archive.html
+  - markdown_generator
+  - talkmap
+  - files/paper1.pdf
+  - files/paper2.pdf
+  - files/paper3.pdf
+  - files/slides1.pdf
+  - files/slides2.pdf
+  - files/slides3.pdf
   # Keep template examples out of the public site, feeds, and sitemap.
   - _posts/2012-08-14-blog-post-1.md
   - _posts/2013-08-14-blog-post-2.md

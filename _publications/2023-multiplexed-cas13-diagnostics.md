@@ -1,4 +1,5 @@
 ---
+description: "A multiplexed Cas13 assay for simultaneous COVID-19 diagnosis and variant surveillance, coauthored by Thanakrit Wongsatit. The CRISPR Journal (2023)."
 layout: "single"
 title: "A Multiplexed Cas13-Based Assay with Point-of-Care Attributes for Simultaneous COVID-19 Diagnosis and Variant Surveillance"
 collection: "publications"
