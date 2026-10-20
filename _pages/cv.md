@@ -73,6 +73,8 @@ Advisor: Dr. Chayasith Uttamapinant
 
 ## Selected Publications
 
+[Complete publication list]({{ '/publications/' | relative_url }}) · [BibTeX bibliography]({{ '/files/publications.bib' | relative_url }})
+
 - Homchan, A.<sup>†</sup>, Patchsung, M.<sup>†</sup>, Chantanakool, P.<sup>†</sup>, **Wongsatit, T.**<sup>†</sup>, Onchan, W., Muengsaen, D., ... & Uttamapinant, C. (2025). Recombinase-Controlled Multiphase Condensates Accelerate Nucleic Acid Amplification and CRISPR-Based Diagnostics. *Journal of the American Chemical Society*, 147(12), 10088–10103. [DOI](https://doi.org/10.1021/jacs.4c11893).
 
 - Eiamthong, B.<sup>†</sup>, Meesawat, P.<sup>†</sup>, **Wongsatit, T.**<sup>†</sup>, Jitdee, J.<sup>†</sup>, Sangsri, R., Patchsung, M., ... & Uttamapinant, C. (2022). Discovery and Genetic Code Expansion of a Polyethylene Terephthalate (PET) Hydrolase from the Human Saliva Metagenome for the Degradation and Bio-Functionalization of PET. *Angewandte Chemie International Edition*, 61(37), e202203061. [DOI](https://doi.org/10.1002/anie.202203061).
