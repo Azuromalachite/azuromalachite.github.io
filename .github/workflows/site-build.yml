@@ -3,7 +3,7 @@ name: Check website build
 on:
   pull_request:
   push:
-    branches: [master, update-personal-site]
+    branches: [master]
   workflow_dispatch:
 
 permissions:
@@ -44,7 +44,5 @@ jobs:
           grep -q '10.1038/s41551-020-00603-x' _site/publications/index.html
           grep -q 'POSCO Asia Fellowship' _site/cv/index.html
           grep -q 'Asia &amp; Oceania Review Sessions' _site/teaching/index.html
-          if grep -R -l 'Paper Title Number\|Blog Post number\|Teaching experience 1' _site --include='*.html' --include='*.xml'; then
-            echo 'Template sample content is still being published.'
-            exit 1
-          fi
+      - name: Check all excluded collection examples and retired assets
+        run: python3 scripts/check-excluded.py

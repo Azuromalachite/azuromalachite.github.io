@@ -52,7 +52,7 @@ for route in routes:
 assert len(set(descriptions))==len(routes), 'Page descriptions should be distinct'
 
 urls={x.text for x in ET.parse(SITE/'sitemap.xml').findall('.//{http://www.sitemaps.org/schemas/sitemap/0.9}loc')}
-allowed={BASE+r for r in routes}|{BASE+'/files/2020-08-26-paper.pdf'}
+allowed={BASE+r for r in routes}
 assert urls <= allowed, f'Unexpected sitemap URLs: {urls-allowed}'
 assert {BASE+r for r in routes} <= urls, 'Missing real content in sitemap'
 for path in ['markdown/index.html','non-menu-page/index.html','terms/index.html','markdown_generator/index.html',
