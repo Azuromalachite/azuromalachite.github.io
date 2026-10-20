@@ -82,7 +82,7 @@ Advisor: Dr. Chayasith Uttamapinant
 
 - Patchsung, M., Jantarug, K., Pattama, A., Aphicho, K., Suraritdechachai, S., Meesawat, P., ..., **Wongsatit, T.**, ... & Uttamapinant, C. (2020). Clinical validation of a Cas13-based assay for the detection of SARS-CoV-2 RNA. *Nature Biomedical Engineering*, 4(12), 1140–1149. [DOI](https://doi.org/10.1038/s41551-020-00603-x).
 
-<sup>†</sup> Equal contribution.
+<sup>†</sup> Co-first authors; contributed equally.
 
 ## Fellowships & Awards
 
@@ -101,6 +101,7 @@ Awarded for undergraduate thesis research on thermostable homologs of the archae
 ## Teaching & Community
 
 - **How to Grow (Almost) Anything (HTGAA)** — Global TA, 2022–present; co-organizer of the 2024 Asia & Oceania Review Sessions.
+- **HOM SCREW Journal Club** — regular participant and occasional presenter, 2024–present.
 - **De novo protein design, VISTEC** — lecturer, 2024–2026.
 - **BioXCepTion, KVIS** — participant and subsequent workshop instructor.
 - **Thai SynBio Challenge 2026** — organizing team member.

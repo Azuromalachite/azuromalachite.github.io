@@ -54,6 +54,7 @@ To run the maintenance checks after generating the site:
 bundle exec jekyll build
 python3 scripts/check-seo.py
 python3 scripts/check-structure.py
+python3 scripts/check-accessibility.py
 python3 scripts/check-excluded.py
 ```
 

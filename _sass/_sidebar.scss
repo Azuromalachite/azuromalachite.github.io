@@ -117,6 +117,8 @@
 
 .author__name {
   margin: 0;
+  font-weight: bold;
+  line-height: 1.2;
 
   @include breakpoint($large) {
     margin-top: 10px;
