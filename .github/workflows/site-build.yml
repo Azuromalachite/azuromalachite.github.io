@@ -1,0 +1,31 @@
+name: Check website build
+
+on:
+  pull_request:
+  push:
+    branches: [master, update-personal-site]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out website
+        uses: actions/checkout@v4
+      - name: Build with GitHub Pages Jekyll
+        uses: actions/jekyll-build-pages@v1
+      - name: Check personal pages and excluded examples
+        shell: bash
+        run: |
+          test -s _site/index.html
+          test -s _site/cv/index.html
+          test -s _site/teaching/index.html
+          grep -q 'POSCO Asia Fellowship' _site/cv/index.html
+          grep -q 'Asia &amp; Oceania Review Sessions' _site/teaching/index.html
+          if grep -R -l 'Paper Title Number\|Blog Post number\|Teaching experience 1' _site --include='*.html' --include='*.xml'; then
+            echo 'Template sample content is still being published.'
+            exit 1
+          fi
