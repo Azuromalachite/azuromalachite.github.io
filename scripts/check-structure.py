@@ -7,6 +7,7 @@ class Structure(HTMLParser):
         super().__init__();self.content=False;self.headings=[];self.links=[];self.heading=None;self.text='';self.nav=False;self.nav_links=[];self.anchor=None;self.anchor_text=''
     def handle_starttag(self,tag,attrs):
         a=dict(attrs)
+        if 'href' in a:a['href']=a['href'].removeprefix('https://azuromalachite.github.io')
         if tag=='section' and 'page__content' in a.get('class','').split():self.content=True
         if tag=='nav' and a.get('id')=='site-nav':self.nav=True
         if tag=='a':
