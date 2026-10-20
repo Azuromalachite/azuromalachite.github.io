@@ -28,11 +28,11 @@ author:
   location         : "Daejeon, South Korea"
   employer         : "KAIST"
   uri              : # URL
-  email            :
+  email            : "austinwongsatit@kaist.ac.kr"
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    :
+  googlescholar    : "https://scholar.google.com/citations?user=ejfOOWAAAAAJ&hl=en"
   impactstory      : # URL
   orcid            :
   semantic         : # URL
@@ -49,7 +49,7 @@ author:
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
   # Social media
-  bluesky          : # Replace this with you Bluesky username
+  bluesky          : "austintw.bsky.social"
   facebook         : # Username
   flickr           : # Username
   foursquare       : # Username
@@ -58,7 +58,7 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : # Username
+  linkedin         : "thanakrit-wongsatit-59a540125"
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username
