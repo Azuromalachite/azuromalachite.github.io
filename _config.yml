@@ -274,6 +274,11 @@ collections:
 
 # These settings control how pages and collections are included in the site
 defaults:
+  # Keep Google's unchanged ownership file out of the content sitemap.
+  - scope:
+      path: "googlee44ab5cc8b243c39.html"
+    values:
+      sitemap: false
   # _posts
   - scope:
       path: ""
