@@ -23,7 +23,7 @@ class Head(HTMLParser):
         if self.in_title: self.title+=data
         if self.in_json: self.json[-1]+=data
 
-routes=['/','/publications/','/cv/','/art-biodesign/','/teaching/',
+routes=['/','/research/','/natural-history/','/publications/','/cv/','/art-biodesign/','/teaching/',
         '/publications/2020-cas13-clinical-validation/', '/publications/2022-metagenomic-pet-hydrolase/',
         '/publications/2023-multiplexed-cas13-diagnostics/', '/publications/2024-pet-recycling-upcycling-review/',
         '/publications/2025-recombinase-condensates/']
@@ -64,4 +64,4 @@ for path in ['404.html','sitemap/index.html']:
     assert any(m.get('name')=='robots' and 'noindex' in m.get('content','') for m in parser.meta), path
 image=(SITE/'images/social-preview.png').read_bytes()
 assert image[:8]==b'\x89PNG\r\n\x1a\n' and struct.unpack('>II',image[16:24])==(1200,630)
-print('SEO checks passed for 10 content pages, identity data, sharing metadata, and clean sitemap.')
+print(f'SEO checks passed for {len(routes)} content pages, identity data, sharing metadata, and clean sitemap.')
