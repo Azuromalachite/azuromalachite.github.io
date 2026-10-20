@@ -12,6 +12,7 @@ publication_authors: "<strong>Thanakrit Wongsatit</strong>, Thanate Srimora, Cho
 publication_meta: "38, 100515 (2024)"
 doi: "10.1016/j.coisb.2024.100515"
 equal_contribution: false
+first_author: true
 publication_summary: "A first-author review connecting PET-degrading enzymes, auxiliary pathways, and microbial systems for plastic recycling and upcycling."
 selected_home: true
 share: false

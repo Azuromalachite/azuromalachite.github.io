@@ -24,7 +24,7 @@ redirect_from:
 {% for paper in selected %}
 <article class="work"><span class="year">{{ paper.year }}</span><div>
 <h3><a href="{{ paper.url | relative_url }}">{{ paper.homepage_title | default: paper.title | escape }} <span aria-hidden="true">↗</span></a></h3>
-<div class="meta">{{ paper.venue | escape }} · {% if paper.co_first_author %}Co-first author{% elsif paper.publication_type == 'Review' %}First-author review{% else %}{{ paper.publication_type | escape }}{% endif %}</div>
+<div class="meta">{{ paper.venue | escape }} · {% if paper.co_first_author %}Co-first author{% elsif paper.first_author %}First-author {{ paper.publication_type | downcase | escape }}{% else %}{{ paper.publication_type | escape }}{% endif %}</div>
 {% if paper.contribution_summary %}<p>{{ paper.contribution_summary | escape }}</p>{% elsif paper.publication_summary %}<p>{{ paper.publication_summary | escape }}</p>{% endif %}
 </div></article>
 {% endfor %}
