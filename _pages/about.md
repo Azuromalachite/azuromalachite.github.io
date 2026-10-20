@@ -15,10 +15,16 @@ After graduating from KVIS, I interned at VISTEC with Chayasith Uttamapinant, wh
 
 Today, my research focuses on developing tools and methods for microbiome engineering, using approaches that span protein mining, anaerobic cultivation, long-read sequencing, laboratory automation, and computational biology. More broadly, I am interested in how biological systems function, interact, and evolve across scales, from proteins to microbial communities, and in how biological engineering can draw more deeply on the ecological and evolutionary properties of living systems.
 
-> “the first generation of scientists with the tools to address the dimensions of biodiversity on Earth might also be the last with the opportunity to do so.”
+> The first generation of scientists with the tools to address the dimensions of biodiversity on Earth might also be the last with the opportunity to do so.
 >
-> — James P. Collins, 2009
+> — Adapted from James P. Collins, 13 February 2009, as recorded in the [National Research Council symposium report](https://www.nationalacademies.org/read/13109/chapter/3), p. 11 (2011).
 
 That idea resonates strongly with how I think about biology. The molecular tools now available to us make it possible to study biological diversity at extraordinary resolution, but understanding that diversity also requires paying attention to organisms, their environments, and their evolutionary histories.
 
 Outside my main research, I study the taxonomy and natural history of Southeast Asian blue-banded bees (*Amegilla*), in conversation and collaboration with wild-bee researchers in Thailand. I also enjoy photographing nature (especially flowers, bees, and birds) and maintain a longstanding interest in visual design and scientific communication.
+
+## Art, biodesign & collaborative practice
+
+Alongside scientific research and natural history, I have been involved in projects that bring biology into conversation with art, design, technology, and culture. These include collaborations with Henry Tan and the FREAK Lab community, the Molecular Soundtrack protein-design project, and an advisory role for Phantom Dining.
+
+[Explore my art, biodesign, and collaborative practice]({{ '/art-biodesign/' | relative_url }}).

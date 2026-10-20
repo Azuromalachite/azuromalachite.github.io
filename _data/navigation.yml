@@ -4,6 +4,8 @@ main:
     url: /
   - title: "Publications"
     url: /publications/
+  - title: "Art & Biodesign"
+    url: /art-biodesign/
   - title: "Teaching & Community"
     url: /teaching/
   - title: "CV"
