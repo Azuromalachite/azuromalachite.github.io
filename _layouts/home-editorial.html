@@ -1,12 +1,4 @@
 ---
-layout: compress
+layout: editorial
 ---
-<!doctype html>
-<html lang="{{ site.locale | slice: 0,2 }}">
-<head>{% include head.html %}{% include head/custom.html %}<script src="{{ '/assets/js/home.js' | relative_url }}" defer></script></head>
-<body class="editorial-home"><a class="skip-link" href="#main">Skip to content</a><div class="wrap">
-<header class="site-header"><a class="wordmark" href="{{ '/' | relative_url }}">Thanakrit <span>(Austin)</span> Wongsatit</a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation">Menu +</button><nav class="site-nav" id="navigation" aria-label="Main navigation"><a href="{{ '/research/' | relative_url }}">Research</a><a href="{{ '/natural-history/' | relative_url }}">Natural History</a><a href="{{ '/art-biodesign/' | relative_url }}">Art &amp; Biodesign</a><a href="{{ '/teaching/' | relative_url }}">Teaching &amp; Community</a><a href="{{ '/cv/' | relative_url }}">CV</a></nav></header>
-<main id="main">{{ content }}</main>
-<footer class="site-footer"><div>{{ site.author.name | escape }}<br>Daejeon, South Korea</div><div class="footer-links">
-<a href="mailto:{{ site.author.email }}">Email</a><a href="{{ site.author.googlescholar | escape }}">Scholar ↗</a><a href="https://bsky.app/profile/{{ site.author.bluesky }}">Bluesky ↗</a><a href="https://www.linkedin.com/in/{{ site.author.linkedin }}/">LinkedIn ↗</a><a href="https://github.com/{{ site.author.github }}">GitHub ↗</a></div>
-<div class="footer-note">© {{ site.time | date: '%Y' }} {{ site.author.name | escape }} · <a href="{{ '/sitemap/' | relative_url }}">Sitemap</a> · Built with <a href="https://jekyllrb.com/">Jekyll</a>. Inner pages use <a href="https://github.com/academicpages/academicpages.github.io">Academic Pages</a> / <a href="https://github.com/mmistakes/minimal-mistakes">Minimal Mistakes</a>.</div></footer></div></body></html>
+{{ content }}

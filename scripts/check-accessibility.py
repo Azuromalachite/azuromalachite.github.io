@@ -32,11 +32,13 @@ footer_ratio=contrast(footer['color'],footer['background-color'])
 assert nav_ratio>=4.5,nav_ratio
 assert footer_ratio>=4.5,footer_ratio
 assert float(declarations('.page__title')['line-height'])>=1.15
-inner=Path('_site/research/index.html').read_text(encoding='utf-8')
+inner=Path('_site/natural-history/index.html').read_text(encoding='utf-8')
 assert 'aria-label="Toggle navigation menu"' in inner
 assert '.greedy-nav button:focus-visible' in css
 home=Path('_site/index.html').read_text(encoding='utf-8')
 assert 'aria-controls="navigation"' in home and 'aria-expanded="false"' in home
+research=Path('_site/research/index.html').read_text(encoding='utf-8')
+assert 'aria-controls="navigation"' in research and 'aria-expanded="false"' in research
 home_css=Path('_site/assets/css/home.css').read_text(encoding='utf-8')
 tokens=dict(re.findall(r'--([\w-]+):\s*(#[0-9a-fA-F]{6})',home_css))
 for name in ['ink','muted','green']:

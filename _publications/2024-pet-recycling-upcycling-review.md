@@ -15,6 +15,7 @@ equal_contribution: false
 first_author: true
 publication_summary: "A first-author review connecting PET-degrading enzymes, auxiliary pathways, and microbial systems for plastic recycling and upcycling."
 selected_home: true
+research_theme: protein-discovery
 share: false
 comments: false
 ---

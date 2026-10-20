@@ -18,6 +18,7 @@ publication_summary: "Discovery of a PET hydrolase from the human saliva metagen
 contribution_summary: "I contributed to the metagenomic enzyme-discovery work."
 selected_home: true
 homepage_title: "A PET hydrolase from the human saliva metagenome"
+research_theme: protein-discovery
 share: false
 comments: false
 ---

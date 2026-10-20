@@ -12,6 +12,7 @@ publication_authors: "Maturada Patchsung, Aimorn Homchan, Kanokpol Aphicho, Sura
 publication_meta: "6(2), 99–115 (2023)"
 doi: "10.1089/crispr.2022.0048"
 equal_contribution: false
+research_theme: diagnostics
 share: false
 comments: false
 ---

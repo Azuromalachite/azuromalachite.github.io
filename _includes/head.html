@@ -16,7 +16,7 @@
 </script>
 
 <!-- For all browsers -->
-{% if page.layout == 'home-editorial' %}
+{% if page.layout == 'home-editorial' or page.layout == 'editorial' %}
 <link rel="stylesheet" href="{{ '/assets/css/home.css' | relative_url }}">
 {% else %}
 <link rel="stylesheet" href="{{ base_path }}/assets/css/main.css">
