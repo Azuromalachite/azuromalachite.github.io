@@ -1,6 +1,8 @@
 """Check the site's navigation and content hierarchy after Jekyll renders it."""
 from html.parser import HTMLParser
 from pathlib import Path
+import re
+import xml.etree.ElementTree as ET
 
 class Structure(HTMLParser):
     def __init__(self):
@@ -66,7 +68,10 @@ teaching=page('/teaching/')
 assert [level for level,_ in teaching.headings]==['h2','h3','h3','h2','h3','h3','h3','h2','h3','h3'],teaching.headings
 assert 'https://www.youtube.com/watch?v=CvI6IYfv-fk' in teaching.links
 assert 'https://drive.google.com/file/d/1G-s3lcT-Z4YbKzUjtrIHVTP0XLCwgFcI/view' in teaching.links
-assert home_html.count('r="33"')==4
+diagram=ET.fromstring(re.search(r'<svg\b.*?</svg>',home_html,re.S)[0])
+nodes=[node for node in diagram.iter('circle') if node.get('class')=='practice-node']
+assert len(nodes)==4 and len({node.get('r') for node in nodes})==1
+assert len([node for node in diagram.iter('path') if node.get('class')=='practice-triangle'])==2
 assert 'Teaching &amp;' in home_html and 'not chronological' in home_html
 assert 'POSN' in home_html and 'Team B' in home_html and 'olive-backed sunbird' in home_html
 publications=page('/publications/')
