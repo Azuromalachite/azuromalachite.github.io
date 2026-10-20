@@ -10,14 +10,15 @@ author_profile: true
   <p>See also <a href="{{ site.author.googlescholar | escape }}">Google Scholar</a> or <a href="{{ '/files/publications.bib' | relative_url }}" download>download the BibTeX bibliography</a>.</p>
 {% endif %}
 
-<p><sup>†</sup> Equal contribution. Expand an author list to see the published author order.</p>
+<p><sup>†</sup> Co-first authors; contributed equally. Expand an author list to see the published author order.</p>
 
 {% assign publications = site.publications | sort: 'year' | reverse %}
 {% for post in publications %}
   <article class="archive__item">
     <h2>{{ post.year }} · <a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
     <p><em>{{ post.venue }}</em> {{ post.publication_meta }} · {{ post.publication_type }}</p>
-    {% if post.equal_contribution %}<p><strong>Equal-contributing author</strong></p>{% endif %}
+    {% if post.co_first_author %}<p><strong>Co-first author</strong></p>{% elsif post.equal_contribution %}<p><strong>Equal-contributing author</strong></p>{% endif %}
+    {% if post.publication_summary %}<p><em>{{ post.publication_summary | escape }}</em>{% if post.contribution_summary %}<br>{{ post.contribution_summary | escape }}{% endif %}</p>{% endif %}
     <details>
       <summary>Authors</summary>
       <p>{{ post.publication_authors }}</p>

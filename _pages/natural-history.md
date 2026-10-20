@@ -12,7 +12,7 @@ Natural history has become a parallel strand of my scientific life. Observing or
 
 I work particularly on Southeast Asian blue-banded bees of the genus *Amegilla*. Through observations, photography, literature study, specimen comparisons, and ongoing conversations with wild-bee researchers in Thailand, including Natapot Warrit and Chawatat Thanoosing at Chulalongkorn University, I contribute to efforts to resolve difficult species identifications and taxonomic questions in the region.
 
-This work has become an important second strand of my scientific life. Taxonomy operates at a very different scale from molecular biology, but I find many of the underlying habits surprisingly similar: paying attention to variation, distinguishing meaningful signals from noise, and understanding organisms in their ecological and historical context.
+Taxonomy operates at a very different scale from molecular biology, but I find many of the underlying habits surprisingly similar: paying attention to variation, distinguishing meaningful signals from noise, and understanding organisms in their ecological and historical context.
 
 ## A problem nearly a century old
 

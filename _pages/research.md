@@ -10,9 +10,7 @@ My research sits at the intersection of microbial ecology, evolution, and biolog
 
 [Browse all publications]({{ '/publications/' | relative_url }}) · [Download BibTeX]({{ '/files/publications.bib' | relative_url }}) · [View my CV]({{ '/cv/' | relative_url }})
 
-## Current work
-
-### Microbiome engineering
+## Current work: microbiome engineering
 
 As a PhD student in the Graduate School of Engineering Biology at KAIST, working under the supervision of Professor Sung Sun Yim, I develop tools and methods for microbiome engineering. My approaches span protein mining, anaerobic cultivation, long-read sequencing, laboratory automation, and computational biology.
 

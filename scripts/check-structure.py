@@ -7,6 +7,8 @@ class Structure(HTMLParser):
         super().__init__();self.content=False;self.headings=[];self.links=[];self.heading=None;self.text='';self.nav=False;self.nav_links=[];self.anchor=None;self.anchor_text=''
     def handle_starttag(self,tag,attrs):
         a=dict(attrs)
+        if tag in ['h1','h2','h3','h4','h5','h6'] and not hasattr(self,'first_heading'):self.first_heading=tag
+        if 'author__name' in a.get('class','').split():assert tag=='p','Sidebar name must not be a heading'
         if 'href' in a:a['href']=a['href'].removeprefix('https://azuromalachite.github.io')
         if tag=='section' and 'page__content' in a.get('class','').split():self.content=True
         if tag=='nav' and a.get('id')=='site-nav':self.nav=True
@@ -29,6 +31,8 @@ def page(route):
 
 expected=[('/', 'About'),('/research/','Research'),('/natural-history/','Natural History'),('/art-biodesign/','Art & Biodesign'),('/teaching/','Teaching & Community'),('/cv/','CV')]
 home=page('/')
+assert home.first_heading=='h1'
+assert '/publications/' in home.links
 assert home.nav_links[1:]==expected,home.nav_links
 # Preserve the three parallel teasers without freezing editorial wording.
 assert [level for level,_ in home.headings]==['h2','h2','h2','h3','h3','h3'],home.headings
@@ -43,7 +47,14 @@ assert 'https://www.inaturalist.org/people/austintw' in natural.links
 assert 'https://ebird.org/profile/OTA2MjI5' in natural.links
 assert all(link and '{{' not in link for link in natural.links)
 art=page('/art-biodesign/')
-assert [level for level,_ in art.headings]==['h2','h2','h3','h3','h3','h2'],art.headings
+assert [level for level,_ in art.headings]==['h2','h2','h3','h3','h2'],art.headings
+teaching=page('/teaching/')
+assert [level for level,_ in teaching.headings]==['h2','h3','h3','h2','h3','h3','h2','h3','h3'],teaching.headings
+publications=page('/publications/')
+assert publications.first_heading=='h1'
+published=(Path('_site/publications/index.html')).read_text(encoding='utf-8')
+assert published.count('<strong>Co-first author</strong>')==2
+assert 'I contributed microscopy image processing and analysis.' in published
 cv=page('/cv/')
 assert '/teaching/' in cv.links and '/natural-history/' in cv.links and '/publications/' in cv.links
 print('Navigation, parallel homepage teasers, research-publication links, art hierarchy, and CV cross-links passed.')

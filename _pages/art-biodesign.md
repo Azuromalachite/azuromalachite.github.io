@@ -10,9 +10,9 @@ Alongside scientific research and natural history, I have been involved in proje
 
 ## Molecular Soundtrack: Designing Proteins with IU's Song Titles
 
-I developed **Molecular Soundtrack: Designing Proteins with IU's Song Titles**, a project that treats proteins as a kind of nanoscale sculpture. Instead of translating music itself, I translated the words of IU's song titles into amino-acid sequences and explored the structures they might form.
+I developed **Molecular Soundtrack: Designing Proteins with IU's Song Titles**, a project that treats proteins as a kind of nanoscale sculpture. Instead of translating music itself, I translated the words of IU's song titles into amino-acid sequences and explored their predicted structures.
 
-The project began from a small observation: IU's romanized alias, **DLWLRMA**, can itself be read as an amino-acid sequence. From there, song titles became a peculiar vocabulary for making molecular forms—structures that are physically real but normally invisible to us.
+The project began from a small observation: IU's romanized alias, **DLWLRMA**, can itself be read as an amino-acid sequence. From there, song titles became a peculiar vocabulary for making molecular forms—predicted molecular forms at a scale normally invisible to us.
 
 For me, the project also became a quiet form of admiration. IU's songs have accompanied different moments of my life, so encoding fragments of them into proteins felt like making an unseen, molecular-scale tribute: something closer to a tiny private cheer than a monument.
 
@@ -20,13 +20,11 @@ I first developed the idea as a workshop for **Intimacy with Nature** in Singapo
 
 ## Collaborations
 
+I began collaborating with artist **Henry Tan** in 2021 through **Happy Ending**, a speculative biodesign project developed during the Biodesign Sprint that explored biodegradability and end-of-life processes for plant-based electronic materials.
+
 ### Intimacy with Nature
 
 Through my collaboration with artist Henry Tan, I became involved with the **FREAK Lab** community and **Intimacy with Nature**, a nomadic art–science platform exploring relationships among biotechnology, ecology, biodiversity, and human activity. For its 2023 Singapore chapter at the Singapore Art Museum, I joined as a biologist and co-organizer of a five-day bio-art workshop bringing together artists, scientists, designers, and community-biology practitioners.
-
-### Happy Ending
-
-I began collaborating with artist **Henry Tan** in 2021 through **Happy Ending**, a speculative biodesign project developed during the Biodesign Sprint that explored biodegradability and end-of-life processes for plant-based electronic materials.
 
 ### Phantom Dining
 

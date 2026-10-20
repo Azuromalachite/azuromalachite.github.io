@@ -1,5 +1,5 @@
 ---
-description: "Research on phase separation in recombinase polymerase amplification and CRISPR diagnostics. Equal-contributing author: Thanakrit Wongsatit."
+description: "Research on phase separation in recombinase polymerase amplification and CRISPR diagnostics. Co-first author: Thanakrit Wongsatit."
 layout: "single"
 title: "Recombinase-Controlled Multiphase Condensates Accelerate Nucleic Acid Amplification and CRISPR-Based Diagnostics"
 collection: "publications"
@@ -12,6 +12,10 @@ publication_authors: "Aimorn Homchan<sup>†</sup>, Maturada Patchsung<sup>†</
 publication_meta: "147(12), 10088–10103 (2025)"
 doi: "10.1021/jacs.4c11893"
 equal_contribution: true
+co_first_author: true
+contribution_note: "These authors contributed equally."
+publication_summary: "Recombinase-controlled multiphase condensates accelerate nucleic-acid amplification and CRISPR-based detection."
+contribution_summary: "I contributed microscopy image processing and analysis."
 share: false
 comments: false
 ---
@@ -20,6 +24,10 @@ Aimorn Homchan<sup>†</sup>, Maturada Patchsung<sup>†</sup>, Pheerawat Chanta
 
 *Journal of the American Chemical Society* **147**(12), 10088–10103 (2025).
 
-<sup>†</sup> These authors contributed equally.
+<sup>†</sup> Co-first authors; contributed equally.
 
 [Read the article · DOI: 10.1021/jacs.4c11893](https://doi.org/10.1021/jacs.4c11893)
+
+Recombinase-controlled multiphase condensates accelerate nucleic-acid amplification and CRISPR-based detection.
+
+I contributed microscopy image processing and analysis.
