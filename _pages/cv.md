@@ -98,10 +98,17 @@ Full tuition and stipend fellowship for master's study, originally awarded for t
 
 Awarded for undergraduate thesis research on thermostable homologs of the archaeal PET hydrolase PET46 and evidence for inter-domain gene transfer.
 
+## Earlier Scientific Training
+
+- **International Earth Science Olympiad (IESO), 2018** — selected as a Thai national representative after three rounds of national training camps; participated in Team B, which was ineligible for official individual medals. Individual score within the silver-medal range; no official individual medal awarded.
+- **POSN Biology Camp 2** — March 2017.
+- **POSN astronomy camp** — attended during middle school.
+
 ## Teaching & Community
 
 - **How to Grow (Almost) Anything (HTGAA)** — Global TA, 2022–present; co-organizer of the 2024 Asia & Oceania Review Sessions.
 - **HOM SCREW Journal Club** — regular participant and occasional presenter, 2024–present.
+- **Synbioecology, Naresuan University** — invited guest lecturer for 411311 Synthetic Biology and Genome-Scale Engineering, 27 January 2023; first university guest lecture, given while an undergraduate.
 - **De novo protein design, VISTEC** — lecturer, 2024–2026.
 - **BioXCepTion, KVIS** — participant and subsequent workshop instructor.
 - **Thai SynBio Challenge 2026** — organizing team member.

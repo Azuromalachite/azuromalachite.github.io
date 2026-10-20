@@ -1,40 +1,17 @@
 ---
-layout: single
+layout: editorial
 title: "Research"
 permalink: /research/
-author_profile: true
+author_profile: false
 description: "Research by Thanakrit (Austin) Wongsatit at KAIST: microbiome engineering, biological variation, enzyme discovery, protein engineering, CRISPR diagnostics, and condensates."
 ---
 
-My research sits at the intersection of microbial ecology, evolution, and biological engineering. I am interested in how biological systems function, interact, and evolve across scales, from proteins to microbial communities, and in developing experimental and computational tools to study and engineer them.
+<section class="research-hero" aria-labelledby="research-title"><div><p class="eyebrow">Proteins / microbial communities / ecological context</p><h1 id="research-title">Research.<br><span class="serif"><em>In context.</em></span></h1><p class="research-dek">Developing tools to study and engineer biological systems—and asking how variation, relationships, and environments shape what those tools can do.</p><div class="inline-links"><a href="{{ '/publications/' | relative_url }}">All publications ↗</a><a href="{{ '/files/publications.bib' | relative_url }}">BibTeX bibliography ↓</a><a href="{{ '/cv/' | relative_url }}">CV ↗</a></div></div><nav class="research-index" aria-label="On this page"><p class="meta">Research areas</p><a href="#microbiome">Current work / microbiome engineering ↓</a><a href="#proteins">Previous work / protein discovery ↓</a><a href="#diagnostics">Previous work / molecular tools ↓</a><a href="#context">A wider perspective ↓</a></nav></section>
 
-[Browse all publications]({{ '/publications/' | relative_url }}) · [Download BibTeX]({{ '/files/publications.bib' | relative_url }}) · [View my CV]({{ '/cv/' | relative_url }})
+<section class="research-area" id="microbiome" aria-labelledby="microbiome-title"><div class="area-label"><span class="area-number">01</span><p class="meta">Current work<br>KAIST / Engineering Biology</p></div><div class="area-content"><p class="eyebrow">Tools for microbial life</p><h2 id="microbiome-title">Microbiome engineering</h2><p class="area-question serif">How do biological systems behave across hosts and ecological contexts?</p><div class="area-columns"><div><p>As a PhD student in the Graduate School of Engineering Biology at KAIST, working under the supervision of Professor Sung Sun Yim, I develop tools and methods for microbiome engineering.</p><p>I am interested in biological variation and context: why the same system behaves differently across hosts and environments, how those differences arise through evolution, and what they mean for biological engineering.</p></div><aside class="approach-note" aria-label="Current approaches"><h3>Approaches</h3><ul><li>Protein mining</li><li>Anaerobic cultivation</li><li>Long-read sequencing</li><li>Laboratory automation</li><li>Computational biology</li></ul></aside></div></div></section>
 
-## Current work: microbiome engineering
+<section class="research-area" id="proteins" aria-labelledby="proteins-title"><div class="area-label"><span class="area-number">02</span><p class="meta">Previous work<br>VISTEC</p></div><div class="area-content"><p class="eyebrow">Natural diversity → molecular function</p><h2 id="proteins-title">Protein discovery &amp; engineering</h2><p class="area-question serif">What can natural diversity reveal about molecular function?</p><p>My work at VISTEC included metagenomic mining of plastic-degrading enzymes, sequence and structural analysis, and protein characterization. This connects an interest in biological diversity with opportunities for understanding and engineering molecular function.</p><div class="theme-publications" aria-label="Protein discovery publications">{% assign papers = site.publications | where: 'research_theme', 'protein-discovery' | sort: 'year' | reverse %}{% for paper in papers %}{% include research-publication.html paper=paper %}{% endfor %}</div></div></section>
 
-As a PhD student in the Graduate School of Engineering Biology at KAIST, working under the supervision of Professor Sung Sun Yim, I develop tools and methods for microbiome engineering. My approaches span protein mining, anaerobic cultivation, long-read sequencing, laboratory automation, and computational biology.
+<section class="research-area" id="diagnostics" aria-labelledby="diagnostics-title"><div class="area-label"><span class="area-number">03</span><p class="meta">Previous work<br>VISTEC</p></div><div class="area-content"><p class="eyebrow">Detection / amplification / condensates</p><h2 id="diagnostics-title">Molecular tools for diagnostics</h2><p class="area-question serif">From molecular activity to a readable signal.</p><p>I contributed to efforts to establish a CRISPR diagnostics platform in Thailand, including protein characterization for nucleic-acid detection. I later worked on microscopy image processing and analysis for protein phase-separation systems involved in DNA amplification.</p><div class="theme-publications" aria-label="Diagnostics publications">{% assign papers = site.publications | where: 'research_theme', 'diagnostics' | sort: 'year' | reverse %}{% for paper in papers %}{% include research-publication.html paper=paper %}{% endfor %}</div></div></section>
 
-Across these approaches, I am interested in biological variation and context: why the same system behaves differently across hosts and environments, how those differences arise through evolution, and what they mean for biological engineering.
-
-## Previous work
-
-### Protein discovery and engineering
-
-My previous work at VISTEC included metagenomic mining of plastic-degrading enzymes, sequence and structural analysis, and protein characterization. This connects an interest in natural biological diversity with opportunities for understanding and engineering molecular function.
-
-- [PET hydrolase discovery and genetic code expansion (2022)]({{ '/publications/2022-metagenomic-pet-hydrolase/' | relative_url }})
-- [Enzymes, auxiliaries, and cells for PET recycling and upcycling (2024 review)]({{ '/publications/2024-pet-recycling-upcycling-review/' | relative_url }})
-
-### Molecular tools for nucleic-acid amplification and diagnostics
-
-I contributed to efforts to establish a CRISPR diagnostics platform in Thailand, including protein characterization for nucleic-acid detection. I later worked on microscopy image processing and analysis for protein phase-separation systems involved in DNA amplification.
-
-- [Clinical validation of a Cas13-based SARS-CoV-2 assay (2020)]({{ '/publications/2020-cas13-clinical-validation/' | relative_url }})
-- [Multiplexed Cas13 diagnostics and variant surveillance (2023)]({{ '/publications/2023-multiplexed-cas13-diagnostics/' | relative_url }})
-- [Recombinase-controlled multiphase condensates (2025)]({{ '/publications/2025-recombinase-condensates/' | relative_url }})
-
-## Biological engineering in context
-
-More broadly, I am interested in how biological engineering can draw more deeply on the ecological and evolutionary properties of living systems. Rather than treating context, variation, and evolution only as sources of noise, I am interested in what they can teach us about how biological systems should be studied and designed.
-
-These questions also connect with my [natural-history work]({{ '/natural-history/' | relative_url }}) and [art and biodesign practice]({{ '/art-biodesign/' | relative_url }}).
+<section class="research-context" id="context" aria-labelledby="context-title"><p class="section-index">A wider perspective</p><div><h2 id="context-title">Biological engineering<br><span class="serif"><em>in context.</em></span></h2><p>More broadly, I am interested in how biological engineering can draw more deeply on the ecological and evolutionary properties of living systems. Context, variation, and evolution are not only sources of noise; they can also teach us how biological systems should be studied and designed.</p><p>These questions connect with my work in natural history and with the different encounters with biology made possible through art and design.</p><div class="inline-links"><a href="{{ '/natural-history/' | relative_url }}">Natural History ↗</a><a href="{{ '/art-biodesign/' | relative_url }}">Art &amp; Biodesign ↗</a></div></div></section>

@@ -45,18 +45,30 @@ assert 'unpublished' not in home_html.lower() and 'design study' not in home_htm
 for route,_ in expected[1:]:
     assert route in home.links,route
 research=page('/research/')
-assert research.nav_links[1:]==expected,research.nav_links
+assert research.nav_links==expected[1:],research.nav_links
+research_html=Path('_site/research/index.html').read_text(encoding='utf-8')
+assert research.first_heading=='h1' and research_html.count('<h1 ')==1
+assert 'class="author__avatar"' not in research_html
+assert '/assets/css/home.css' in research_html and '/assets/css/main.css' not in research_html
+assert research_html.count('class="research-paper"')==5
+assert 'aria-current="page">Research' in research_html
 assert '/publications/' in research.links
 for slug in ['2020-cas13-clinical-validation','2022-metagenomic-pet-hydrolase','2023-multiplexed-cas13-diagnostics','2024-pet-recycling-upcycling-review','2025-recombinase-condensates']:
     assert '/publications/'+slug+'/' in research.links
 natural=page('/natural-history/')
+assert natural.nav_links[1:]==expected,natural.nav_links
 assert 'https://www.inaturalist.org/people/austintw' in natural.links
 assert 'https://ebird.org/profile/OTA2MjI5' in natural.links
 assert all(link and '{{' not in link for link in natural.links)
 art=page('/art-biodesign/')
 assert [level for level,_ in art.headings]==['h2','h2','h3','h3','h2'],art.headings
 teaching=page('/teaching/')
-assert [level for level,_ in teaching.headings]==['h2','h3','h3','h2','h3','h3','h2','h3','h3'],teaching.headings
+assert [level for level,_ in teaching.headings]==['h2','h3','h3','h2','h3','h3','h3','h2','h3','h3'],teaching.headings
+assert 'https://www.youtube.com/watch?v=CvI6IYfv-fk' in teaching.links
+assert 'https://drive.google.com/file/d/1G-s3lcT-Z4YbKzUjtrIHVTP0XLCwgFcI/view' in teaching.links
+assert home_html.count('r="33"')==4
+assert 'Teaching &amp;' in home_html and 'not chronological' in home_html
+assert 'POSN' in home_html and 'Team B' in home_html and 'olive-backed sunbird' in home_html
 publications=page('/publications/')
 assert publications.first_heading=='h1'
 published=(Path('_site/publications/index.html')).read_text(encoding='utf-8')
