@@ -27,7 +27,7 @@ jobs:
           grep -q 'Happy Ending' _site/art-biodesign/index.html
           grep -q 'DLWLRMA' _site/art-biodesign/index.html
           grep -q 'Phantom Dining' _site/art-biodesign/index.html
-          grep -q 'https://doi.org/10.17226/13109' _site/index.html
+          grep -q 'https://www.nationalacademies.org/read/13109/chapter/3' _site/index.html
           test -s _site/publications/index.html
           test -s _site/files/publications.bib
           test "$(grep -o '<summary>Authors</summary>' _site/publications/index.html | wc -l)" -eq 5
