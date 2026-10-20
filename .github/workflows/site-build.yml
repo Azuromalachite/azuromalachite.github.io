@@ -19,6 +19,8 @@ jobs:
         uses: actions/jekyll-build-pages@v1
       - name: Check rendered search metadata and sitemap
         run: python3 scripts/check-seo.py
+      - name: Check page hierarchy and navigation
+        run: python3 scripts/check-structure.py
       - name: Check unchanged Google verification file
         run: cmp googlee44ab5cc8b243c39.html _site/googlee44ab5cc8b243c39.html
       - name: Check personal pages and excluded examples

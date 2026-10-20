@@ -100,47 +100,19 @@ Awarded for undergraduate thesis research on thermostable homologs of the archae
 
 ## Teaching & Community
 
-### How to Grow (Almost) Anything (HTGAA)
+- **How to Grow (Almost) Anything (HTGAA)** — Global TA, 2022–present; co-organizer of the 2024 Asia & Oceania Review Sessions.
+- **De novo protein design, VISTEC** — lecturer, 2024–2026.
+- **BioXCepTion, KVIS** — participant and subsequent workshop instructor.
+- **Thai SynBio Challenge 2026** — organizing team member.
+- **Get Rich with SynBio (รวยด้วย SynBio)** — project lead, coordinator, and graphic designer, 2021–2022.
 
-**Global Teaching Assistant** · 2022–present
-
-Joined HTGAA initially as a committed listener in 2022 and subsequently became a Global TA.
-
-Co-organized the **HTGAA Asia & Oceania Review Sessions** in 2024 with Georg Tremmel and Elaine Regina. The sessions were a self-organized response to challenging lecture times for students in Asian and Oceanian time zones and provided lecture and homework reviews at more accessible times.
-
-### De novo Protein Design, VISTEC
-
-**Lecturer** · 2024–2026
-
-Delivered lectures introducing de novo protein design as the inverse problem of protein structure prediction and surveying emerging computational approaches for designing new-to-nature proteins.
-
-### BioXCepTion, Kamnoetvidya Science Academy
-
-**Participant and subsequent workshop instructor**
-
-Participated in a molecular docking workshop organized by Bundit Boonyarit and later joined the team formed around the initiative, helping teach a subsequent workshop at KVIS.
-
-### Thai SynBio Challenge 2026
-
-**Organizing team member**
-
-Contributing to an initiative aimed at strengthening the emerging synthetic biology community in Thailand.
-
-### Get Rich with SynBio (รวยด้วย SynBio)
-
-**Project lead, coordinator, and graphic designer** · 2021–2022
-
-Thai-language podcast project about synthetic biology. Coordinated the project and developed visual materials in collaboration with Pakpoom Subsoontorn, Cholpisit Kiattesewee, and Nattawat Leelahakorn.
+[More on teaching and community]({{ '/teaching/' | relative_url }}).
 
 ## Natural History
 
-### Southeast Asian blue-banded bees (*Amegilla*)
+Independent work on Southeast Asian blue-banded bee (*Amegilla*) taxonomy, including species identification, historical literature, photographic records, and specimen comparison, in discussion and collaboration with Natapot Warrit and Chawatat Thanoosing at Chulalongkorn University.
 
-Independent work on the taxonomy and natural history of Southeast Asian blue-banded bees of the genus *Amegilla*.
-
-Activities include species identification, historical literature research, photographic records, specimen comparison, and ongoing discussion and collaboration with wild-bee researchers in Thailand (Natapot Warrit and Chawatat Thanoosing at Chulalongkorn University).
-
-Additional interests include plant–pollinator interactions, biodiversity observation, and nature photography.
+[More on natural history]({{ '/natural-history/' | relative_url }}).
 
 ## Technical Skills
 

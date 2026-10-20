@@ -2,8 +2,10 @@
 main:
   - title: "About"
     url: /
-  - title: "Publications"
-    url: /publications/
+  - title: "Research"
+    url: /research/
+  - title: "Natural History"
+    url: /natural-history/
   - title: "Art & Biodesign"
     url: /art-biodesign/
   - title: "Teaching & Community"

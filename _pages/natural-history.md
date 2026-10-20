@@ -1,0 +1,35 @@
+---
+layout: single
+title: "Natural History"
+permalink: /natural-history/
+author_profile: true
+description: "Natural history work by Austin Wongsatit on Southeast Asian Amegilla bees, species identification, field observation, plant–pollinator interactions, and photography."
+---
+
+Alongside experimental and computational biology, I maintain a strong interest in natural history. Observing organisms is a way of asking biological questions in their ecological and historical context: paying attention to variation, reconstructing relationships, and understanding where organisms live and how they interact.
+
+## Blue-banded bees (*Amegilla*)
+
+I work particularly on Southeast Asian blue-banded bees of the genus *Amegilla*. Through observations, photography, literature study, specimen comparisons, and ongoing conversations with wild-bee researchers in Thailand, including Natapot Warrit and Chawatat Thanoosing at Chulalongkorn University, I contribute to efforts to resolve difficult species identifications and taxonomic questions in the region.
+
+This work has become an important second strand of my scientific life. Taxonomy operates at a very different scale from molecular biology, but I find many of the underlying habits surprisingly similar: paying attention to variation, distinguishing meaningful signals from noise, and understanding organisms in their ecological and historical context.
+
+## A problem nearly a century old
+
+The difficulty is not new. Writing about the *Anthophora zonata* group in 1929, Cedric Dover remarked that its taxonomy was already “in a very confused state,” and argued that:
+
+> “any attempt to provide more than a working classification seems to me to be futile without a very large series of specimens from all parts of their geographical range, and without extensive ecological and experimental observations.”
+
+*— Cedric Dover, 1929, [Wasps and Bees in the Raffles Museum, Singapore](https://lkcnhm.nus.edu.sg/app/uploads/2017/06/02brm043-070.pdf), Bulletin of the Raffles Museum 2: 43–70, p. 57.*
+
+Nearly a century later, that observation still captures much of what makes Southeast Asian *Amegilla* so interesting to me. Resolving these bees requires not only comparing morphology, but also assembling observations across geography, revisiting historical literature and specimens, and eventually connecting taxonomic variation with ecology.
+
+## Field observation
+
+Field observations and photographic records help connect identification with geographic variation, biodiversity, and plant–pollinator interactions. They also provide a way to return to an observation, compare it with other records, and ask better questions as an identification develops.
+
+[My observations and identifications on iNaturalist](https://www.inaturalist.org/people/austintw).
+
+## Photography
+
+I enjoy photographing nature, especially flowers, bees, and birds. Photography is a way of paying closer attention to organisms and their environments, and it connects my natural-history interests with visual observation and design.
