@@ -23,6 +23,14 @@ jobs:
           test -s _site/index.html
           test -s _site/cv/index.html
           test -s _site/teaching/index.html
+          test -s _site/publications/index.html
+          test -s _site/files/publications.bib
+          test "$(grep -o '<summary>Authors</summary>' _site/publications/index.html | wc -l)" -eq 5
+          grep -q '10.1021/jacs.4c11893' _site/publications/index.html
+          grep -q '10.1016/j.coisb.2024.100515' _site/publications/index.html
+          grep -q '10.1089/crispr.2022.0048' _site/publications/index.html
+          grep -q '10.1002/anie.202203061' _site/publications/index.html
+          grep -q '10.1038/s41551-020-00603-x' _site/publications/index.html
           grep -q 'POSCO Asia Fellowship' _site/cv/index.html
           grep -q 'Asia &amp; Oceania Review Sessions' _site/teaching/index.html
           if grep -R -l 'Paper Title Number\|Blog Post number\|Teaching experience 1' _site --include='*.html' --include='*.xml'; then

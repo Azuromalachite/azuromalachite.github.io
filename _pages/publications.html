@@ -6,31 +6,24 @@ author_profile: true
 ---
 
 {% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{https://scholar.google.com/citations?user=ejfOOWAAAAAJ}}">my Google Scholar profile</a>.</div>
+  <p>See also <a href="{{ site.author.googlescholar | escape }}">Google Scholar</a> or <a href="{{ '/files/publications.bib' | relative_url }}" download>download the BibTeX bibliography</a>.</p>
 {% endif %}
 
-{% include base_path %}
+<p><sup>†</sup> Equal contribution. Expand an author list to see the published author order.</p>
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
+{% assign publications = site.publications | sort: 'year' | reverse %}
+{% for post in publications %}
+  <article class="archive__item">
+    <h2>{{ post.year }} · <a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+    <p><em>{{ post.venue }}</em> {{ post.publication_meta }} · {{ post.publication_type }}</p>
+    {% if post.equal_contribution %}<p><strong>Equal-contributing author</strong></p>{% endif %}
+    <details>
+      <summary>Authors</summary>
+      <p>{{ post.publication_authors }}</p>
+    </details>
+    <p><a href="https://doi.org/{{ post.doi }}">Read article</a> · <a href="{{ post.url | relative_url }}">Publication details</a></p>
+  </article>
+{% endfor %}
 
 
 
