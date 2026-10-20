@@ -16,6 +16,7 @@ co_first_author: true
 contribution_note: "These authors contributed equally."
 publication_summary: "Recombinase-controlled multiphase condensates accelerate nucleic-acid amplification and CRISPR-based detection."
 contribution_summary: "I contributed microscopy image processing and analysis."
+selected_home: true
 share: false
 comments: false
 ---

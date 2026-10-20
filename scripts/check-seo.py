@@ -9,14 +9,16 @@ BASE = 'https://azuromalachite.github.io'
 SITE = Path('_site')
 class Head(HTMLParser):
     def __init__(self):
-        super().__init__(); self.title=''; self.meta=[]; self.links=[]; self.json=[]; self.in_title=False; self.in_json=False
+        super().__init__(); self.title=''; self.meta=[]; self.links=[]; self.json=[]; self.in_title=False; self.in_json=False; self.in_head=False
     def handle_starttag(self, tag, attrs):
         attrs=dict(attrs)
-        if tag=='title': self.in_title=True
+        if tag=='head': self.in_head=True
+        if tag=='title' and self.in_head: self.in_title=True
         if tag=='meta': self.meta.append(attrs)
         if tag=='link': self.links.append(attrs)
         if tag=='script' and attrs.get('type')=='application/ld+json': self.in_json=True; self.json.append('')
     def handle_endtag(self, tag):
+        if tag=='head': self.in_head=False
         if tag=='title': self.in_title=False
         if tag=='script': self.in_json=False
     def handle_data(self, data):

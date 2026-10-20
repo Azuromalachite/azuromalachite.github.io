@@ -9,6 +9,8 @@ This repository contains my personal website, covering microbiome engineering an
 | Content | File or directory |
 | --- | --- |
 | About and homepage | [`_pages/about.md`](_pages/about.md) |
+| Full biography within the homepage | [`_includes/home-biography.md`](_includes/home-biography.md) |
+| Homepage layout and styles | [`_layouts/home-editorial.html`](_layouts/home-editorial.html), [`assets/css/home.css`](assets/css/home.css) |
 | Research overview | [`_pages/research.md`](_pages/research.md) |
 | Natural history | [`_pages/natural-history.md`](_pages/natural-history.md) |
 | Art and biodesign | [`_pages/art-biodesign.md`](_pages/art-biodesign.md) |
@@ -22,6 +24,8 @@ This repository contains my personal website, covering microbiome engineering an
 | Photographs and other images | [`images/`](images/) |
 
 Keep publication records and the BibTeX bibliography consistent, using the publisher's exact title, author list, and DOI. Upload full-text papers only when permission to share that version has been established. Give images descriptive alt text and appropriate captions and credits.
+
+The homepage uses a separate editorial layout; inner pages retain Academic Pages. Set `selected_home: true` on a publication record to feature it on the homepage. Its year, title, venue, authorship role, and contribution or summary are read from that record; `homepage_title` can supply a shorter display title without changing the citation.
 
 Some original template examples remain in the repository for reference. They are excluded from publication in `_config.yml`. This README and the maintenance scripts are also excluded from the generated website.
 

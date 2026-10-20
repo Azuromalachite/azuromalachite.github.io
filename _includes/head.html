@@ -16,6 +16,10 @@
 </script>
 
 <!-- For all browsers -->
+{% if page.layout == 'home-editorial' %}
+<link rel="stylesheet" href="{{ '/assets/css/home.css' | relative_url }}">
+{% else %}
 <link rel="stylesheet" href="{{ base_path }}/assets/css/main.css">
+{% endif %}
 
 <meta http-equiv="cleartype" content="on">
