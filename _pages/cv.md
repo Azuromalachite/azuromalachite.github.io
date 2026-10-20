@@ -1,4 +1,5 @@
 ---
+description: "Education, research experience, publications, awards, teaching, and technical skills of Thanakrit (Austin) Wongsatit, PhD student in Engineering Biology at KAIST."
 layout: single
 title: "CV"
 permalink: /cv/

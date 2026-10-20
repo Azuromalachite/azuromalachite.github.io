@@ -1,4 +1,6 @@
 ---
+description: "Thanakrit (Austin) Wongsatit is a PhD student at KAIST developing tools for microbiome engineering, with interests in ecology, evolution, natural history, and biodesign."
+seo_title: "Thanakrit (Austin) Wongsatit — Microbiome Engineering at KAIST"
 permalink: /
 title: "Thanakrit (Austin) Wongsatit"
 author_profile: true
