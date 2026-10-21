@@ -1,0 +1,9 @@
+amegilla_identifications:
+  count: "16,922"
+  taxon: "Amegilla"
+  taxon_id: 199450
+  username: "austintw"
+  rank: 1
+  scope: "Worldwide"
+  snapshot_date: "2026-10-21"
+  source_url: "https://www.inaturalist.org/observations?subview=map&taxon_id=199450&view=identifiers"

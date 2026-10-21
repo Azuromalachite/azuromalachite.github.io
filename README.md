@@ -14,6 +14,7 @@ This repository contains my personal website, covering microbiome engineering an
 | Shared editorial frame | [`_layouts/editorial.html`](_layouts/editorial.html), [`_includes/editorial-header.html`](_includes/editorial-header.html), [`_includes/editorial-footer.html`](_includes/editorial-footer.html) |
 | Research overview | [`_pages/research.md`](_pages/research.md) |
 | Natural history | [`_pages/natural-history.md`](_pages/natural-history.md) |
+| Dated iNaturalist contribution record | [`_data/natural_history.yml`](_data/natural_history.yml) |
 | Art and biodesign | [`_pages/art-biodesign.md`](_pages/art-biodesign.md) |
 | Teaching and community | [`_pages/teaching.html`](_pages/teaching.html) |
 | CV | [`_pages/cv.md`](_pages/cv.md) |
