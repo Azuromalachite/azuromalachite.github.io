@@ -14,10 +14,3 @@ After graduating from KVIS, I interned at VISTEC with Chayasith Uttamapinant, wh
 
 Since 2025, I have been a PhD student in Engineering Biology at KAIST, developing experimental and computational tools for microbiome engineering. My current work brings together anaerobic cultivation, long-read sequencing, protein mining, laboratory automation, and computational biology. Alongside this work, I study the taxonomy and natural history of Southeast Asian blue-banded bees (*Amegilla*). These parallel practices connect my interests in organisms, variation, and ecology with molecular and engineering biology.
 
-## A wider biological perspective
-
-> "We are the first generation of scientists with the tools to address the dimensions of biodiversity on Earth…and ironically we may be the last generation with the opportunity to discover and understand Earth’s biodiversity before it is irrevocably changed or lost."
-
-*— James P. Collins, 13 February 2009, as recorded in the [National Research Council symposium report](https://www.nationalacademies.org/read/13109/chapter/3), p. 11 (2011).*
-
-That idea resonates strongly with how I think about biology. The molecular tools now available to us make it possible to study biological diversity at extraordinary resolution, but understanding that diversity also requires paying attention to organisms, their environments, and their evolutionary histories.
