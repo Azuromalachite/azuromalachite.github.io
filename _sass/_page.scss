@@ -48,6 +48,38 @@
   font-size: $type-size-4;
 }
 
+.page__content .identification-record {
+  margin: 2em 0;
+  padding: 1.3em 1.5em;
+  border-left: 2px solid #36583f;
+  background: #f5f4ef;
+
+  .identification-record__eyebrow {
+    margin: 0 0 1em;
+    font-size: 0.7em;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #586158;
+  }
+
+  .identification-record__count {
+    margin: 0 0 0.2em;
+    font-size: 2.7em;
+    line-height: 1.1;
+    font-weight: 500;
+    color: #36583f;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .identification-record__label { margin: 0 0 0.9em; }
+  .identification-record__source {
+    margin: 0;
+    font-size: 0.75em;
+    line-height: 1.7;
+    color: #586158;
+  }
+}
+
 .page__content {
 
   h2 {

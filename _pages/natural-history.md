@@ -12,6 +12,16 @@ Natural history has become a parallel strand of my scientific life. Observing or
 
 I work particularly on Southeast Asian blue-banded bees of the genus *Amegilla*. Through observations, photography, literature study, specimen comparisons, and ongoing conversations with wild-bee researchers in Thailand, including Natapot Warrit and Chawatat Thanoosing at Chulalongkorn University, I contribute to efforts to resolve difficult species identifications and taxonomic questions in the region.
 
+{% assign record = site.data.natural_history.amegilla_identifications %}
+<aside class="identification-record" aria-label="iNaturalist identification contribution record">
+  <p class="identification-record__eyebrow">Community identification · iNaturalist</p>
+  <p class="identification-record__count">{{ record.count }}</p>
+  <p class="identification-record__label">Identifications contributed to observations of <i>{{ record.taxon }}</i></p>
+  <p class="identification-record__source">Listed first in the <a href="{{ record.source_url | escape }}">worldwide <i>{{ record.taxon }}</i> identifier leaderboard</a> as <a href="https://www.inaturalist.org/people/{{ record.username }}">{{ record.username }}</a>. Snapshot: <time datetime="{{ record.snapshot_date }}">{{ record.snapshot_date | date: '%-d %B %Y' }}</time>.</p>
+</aside>
+
+Identification work lets me compare photographic records across a wide geographic range, revisit difficult determinations, and connect field observations with historical literature and specimen comparisons.
+
 Taxonomy operates at a very different scale from molecular biology, but I find many of the underlying habits surprisingly similar: paying attention to variation, distinguishing meaningful signals from noise, and understanding organisms in their ecological and historical context.
 
 ## A problem nearly a century old
