@@ -52,6 +52,7 @@ const server = http.createServer((req, res) => {
     assert.ok((await page.locator('body').evaluate(el => getComputedStyle(el).fontFamily)).includes('sans-serif'), 'Theme CSS must load before print checks');
     // Print copies avoid browser differences when printing closed details, without JS.
     await page.emulateMedia({ media: 'print' });
+    assert.equal(await page.locator('#main').evaluate(el => getComputedStyle(el).opacity), '1', 'Print must not capture the theme fade-in');
     assert.equal(await page.locator('.print-authors:visible').count(), 5);
     assert.equal(await page.locator('.publication-authors:visible, .sidebar:visible, .masthead:visible, .page__footer:visible').count(), 0);
     for (const link of await page.locator('a[href^="https://doi.org/"]').all()) {

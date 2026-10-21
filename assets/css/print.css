@@ -1,6 +1,7 @@
 /* Shared by the editorial and remaining theme layouts. */
 @page { margin: 18mm; }
 @media print {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
   html, body { background: white !important; color: black !important; font-size: 11pt; }
   .masthead, .sidebar, .site-header, .site-footer, .page__footer,
   .skip-link, .toc, .page__share, .page__related, .page__comments,
