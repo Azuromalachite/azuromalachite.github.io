@@ -19,7 +19,13 @@ const server = http.createServer((req, res) => {
   const browser = await chromium.launch({ headless: true });
   try {
     const page = await browser.newPage();
-    await page.route('**/*', route => route.request().url().startsWith(origin) ? route.continue() : route.abort());
+    await page.route('**/*', route => {
+      const url = new URL(route.request().url());
+      if (url.origin === origin) return route.continue();
+      // Theme assets use the production absolute URL; serve the built copy locally.
+      if (url.hostname === 'azuromalachite.github.io') return route.continue({ url: origin + url.pathname + url.search });
+      return route.abort();
+    });
     await page.goto(origin);
     for (const width of [320, 390, 600, 612, 860, 900, 1100, 1101, 1440, 1766]) {
       await page.setViewportSize({ width, height: 1000 });
@@ -40,6 +46,7 @@ const server = http.createServer((req, res) => {
       assert.equal(await page.locator('link[media="print"]').count(), 1, route);
     }
     assert.equal(await page.locator('.print-authors:visible').count(), 0);
+    assert.ok((await page.locator('body').evaluate(el => getComputedStyle(el).fontFamily)).includes('sans-serif'), 'Theme CSS must load before print checks');
     // Print copies avoid browser differences when printing closed details, without JS.
     await page.emulateMedia({ media: 'print' });
     assert.equal(await page.locator('.print-authors:visible').count(), 5);

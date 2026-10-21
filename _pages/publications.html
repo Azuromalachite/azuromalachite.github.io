@@ -10,7 +10,7 @@ author_profile: true
   <p>See also <a href="{{ site.author.googlescholar | escape }}">Google Scholar</a> or <a href="{{ '/files/publications.bib' | relative_url }}" download>download the BibTeX bibliography</a>.</p>
 {% endif %}
 
-<p><sup>†</sup> Co-first authors; contributed equally. Expand an author list to see the published author order.</p>
+<p><sup>†</sup> Co-first authors; contributed equally. <span class="print-hide">Expand an author list to see the published author order.</span></p>
 
 {% assign publications = site.publications | sort: 'year' | reverse %}
 {% for post in publications %}

@@ -4,7 +4,7 @@
   html, body { background: white !important; color: black !important; font-size: 11pt; }
   .masthead, .sidebar, .site-header, .site-footer, .page__footer,
   .skip-link, .toc, .page__share, .page__related, .page__comments,
-  .page__hero, .pagination, .ads, .publication-authors { display: none !important; }
+  .page__hero, .pagination, .ads, .publication-authors, .print-hide { display: none !important; }
   .wrap, #main, .archive, .page, .page__inner-wrap {
     float: none !important; width: 100% !important; max-width: none !important;
     margin: 0 !important; padding: 0 !important;
