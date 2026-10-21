@@ -1,0 +1,23 @@
+/* Shared by the editorial and remaining theme layouts. */
+@page { margin: 18mm; }
+@media print {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  html, body { background: white !important; color: black !important; font-size: 11pt; }
+  .masthead, .sidebar, .site-header, .site-footer, .page__footer,
+  .skip-link, .toc, .page__share, .page__related, .page__comments,
+  .page__hero, .pagination, .ads, .publication-authors, .print-hide { display: none !important; }
+  .wrap, #main, .archive, .page, .page__inner-wrap {
+    float: none !important; width: 100% !important; max-width: none !important;
+    margin: 0 !important; padding: 0 !important;
+  }
+  .print-authors { display: block !important; }
+  a, a:visited { color: black !important; text-decoration: none !important; }
+  a[href^="https://doi.org/"]::after { content: " (" attr(href) ")"; overflow-wrap: anywhere; }
+  h1, h2, h3, summary { break-after: avoid; }
+  .archive__item, .research-paper, .work { break-inside: avoid; }
+  p { orphans: 3; widows: 3; }
+  .hero, .research-hero, .research-area, .research-context,
+  .perspective-section, .about-strip, .area-columns { display: block; padding-block: 12pt; margin-bottom: 12pt; }
+  .hero h1, .research-hero h1 { font-size: 30pt; }
+  .practice-map, .research-index, .hero-contact, .inline-links { display: none; }
+}

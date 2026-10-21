@@ -27,11 +27,19 @@ This repository contains my personal website, covering microbiome engineering an
 
 Keep publication records and the BibTeX bibliography consistent, using the publisher's exact title, author list, and DOI. Upload full-text papers only when permission to share that version has been established. Give images descriptive alt text and appropriate captions and credits.
 
-The homepage and Research share an editorial frame; other inner pages currently retain Academic Pages. Set `selected_home: true` on a publication record to feature it on the homepage. Its year, title, venue, authorship role, and contribution or summary are read from that record; `homepage_title` can supply a shorter display title without changing the citation. The `research_theme` field groups records on Research (`protein-discovery` or `diagnostics`).
+The homepage, Research, Teaching, Natural History, Art & Biodesign and CV share the editorial frame. The four latter pages use `_layouts/editorial-page.html` and `assets/css/editorial-pages.css`: front matter supplies the introduction and section index; labelled sections retain each page's content. Publications and utility pages retain Academic Pages. Selected imagery can be added to the editorial pages when available; no stock substitutes or empty image placeholders are used.
+
+Set `selected_home: true` on a publication record to feature it on the homepage. Its year, title, venue, authorship role, and contribution or summary are read from that record; `homepage_title` can supply a shorter display title without changing the citation. The `research_theme` field groups records on Research (`protein-discovery` or `diagnostics`).
 
 Some original template examples remain in the repository for reference. They are excluded from publication in `_config.yml`. This README and the maintenance scripts are also excluded from the generated website.
 
 ## Publishing updates
+
+Design decisions: no dark mode, no Publications item in the main navigation, no Thai translation layer, and replace theme pages before removing them. Publications remains reachable through both footers. Thesis figures and results stay private while reanalysis is ongoing.
+
+MathJax is opt-in with `mathjax: true` in a page's front matter; public pages currently need no math loader. Both layouts load `assets/css/print.css`. The publication list supplies print-only author text so closed author disclosures print reliably without JavaScript.
+
+The homepage rail uses `--rail` and `--rail-gap`, shared by section headings, practice titles and publication titles. CI runs `scripts/check-layout.cjs` with Playwright against the built site at ten widths from 320 to 1766 pixels, and checks print output, footer routes and absent math loaders. Layout screenshots and a publication PDF are saved as the `layout-previews` workflow artifact. To run locally after a Jekyll build, install Playwright and Chromium and run `node scripts/check-layout.cjs`.
 
 1. Create a working branch from the latest `master`.
 2. Edit the content and open a pull request into `master`.

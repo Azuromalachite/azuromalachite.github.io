@@ -17,7 +17,7 @@ class Structure(HTMLParser):
         if tag=='a':
             self.links.append(a.get('href',''))
             if self.nav:self.anchor=a.get('href','');self.anchor_text=''
-        if self.content and tag in ['h2','h3']:self.heading=tag;self.text=''
+        if tag in ['h2','h3']:self.heading=tag;self.text=''
     def handle_data(self,data):
         if self.heading:self.text+=data
         if self.anchor is not None:self.anchor_text+=data
@@ -58,7 +58,7 @@ assert '/publications/' in research.links
 for slug in ['2020-cas13-clinical-validation','2022-metagenomic-pet-hydrolase','2023-multiplexed-cas13-diagnostics','2024-pet-recycling-upcycling-review','2025-recombinase-condensates']:
     assert '/publications/'+slug+'/' in research.links
 natural=page('/natural-history/')
-assert natural.nav_links[1:]==expected,natural.nav_links
+assert natural.nav_links==expected[1:],natural.nav_links
 assert 'https://www.inaturalist.org/people/austintw' in natural.links
 assert 'https://ebird.org/profile/OTA2MjI5' in natural.links
 assert all(link and '{{' not in link for link in natural.links)
@@ -81,4 +81,13 @@ assert published.count('<strong>Co-first author</strong>')==2
 assert 'I contributed microscopy image processing and analysis.' in published
 cv=page('/cv/')
 assert '/teaching/' in cv.links and '/natural-history/' in cv.links and '/publications/' in cv.links
+for route in ['teaching','natural-history','art-biodesign','cv']:
+    html=(Path('_site')/route/'index.html').read_text(encoding='utf-8')
+    parsed=page('/'+route+'/')
+    assert parsed.first_heading=='h1' and len(re.findall(r'<h1\b',html))==1,route
+    assert parsed.nav_links==expected[1:],route
+    assert '/assets/css/home.css' in html and '/assets/css/editorial-pages.css' in html,route
+    assert '/assets/css/main.css' not in html and 'author__avatar' not in html,route
+    assert 'class="editorial-section"' in html,route
+    assert '{{' not in html and '{%' not in html,route
 print('Navigation, parallel homepage teasers, research-publication links, art hierarchy, and CV cross-links passed.')

@@ -16,10 +16,12 @@
 </script>
 
 <!-- For all browsers -->
-{% if page.layout == 'home-editorial' or page.layout == 'editorial' %}
+{% if page.layout == 'home-editorial' or page.layout == 'editorial' or page.layout == 'editorial-page' %}
 <link rel="stylesheet" href="{{ '/assets/css/home.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+{% if page.layout == 'editorial-page' %}<link rel="stylesheet" href="{{ '/assets/css/editorial-pages.css' | relative_url }}?v={{ site.time | date: '%s' }}">{% endif %}
 {% else %}
 <link rel="stylesheet" href="{{ base_path }}/assets/css/main.css">
 {% endif %}
 
 <meta http-equiv="cleartype" content="on">
+<style>.print-authors { display: none; }</style>

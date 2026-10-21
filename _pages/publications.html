@@ -10,7 +10,7 @@ author_profile: true
   <p>See also <a href="{{ site.author.googlescholar | escape }}">Google Scholar</a> or <a href="{{ '/files/publications.bib' | relative_url }}" download>download the BibTeX bibliography</a>.</p>
 {% endif %}
 
-<p><sup>†</sup> Co-first authors; contributed equally. Expand an author list to see the published author order.</p>
+<p><sup>†</sup> Co-first authors; contributed equally. <span class="print-hide">Expand an author list to see the published author order.</span></p>
 
 {% assign publications = site.publications | sort: 'year' | reverse %}
 {% for post in publications %}
@@ -19,10 +19,11 @@ author_profile: true
     <p><em>{{ post.venue }}</em> {{ post.publication_meta }} · {{ post.publication_type }}</p>
     {% if post.co_first_author %}<p><strong>Co-first author</strong></p>{% elsif post.equal_contribution %}<p><strong>Equal-contributing author</strong></p>{% endif %}
     {% if post.publication_summary %}<p><em>{{ post.publication_summary | escape }}</em>{% if post.contribution_summary %}<br>{{ post.contribution_summary | escape }}{% endif %}</p>{% endif %}
-    <details>
+    <details class="publication-authors">
       <summary>Authors</summary>
       <p>{{ post.publication_authors }}</p>
     </details>
+    <p class="print-authors">Authors: {{ post.publication_authors }}</p>
     <p><a href="https://doi.org/{{ post.doi }}">Read article</a> · <a href="{{ post.url | relative_url }}">Publication details</a></p>
   </article>
 {% endfor %}

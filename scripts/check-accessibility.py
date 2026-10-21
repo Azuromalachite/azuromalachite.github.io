@@ -32,7 +32,7 @@ footer_ratio=contrast(footer['color'],footer['background-color'])
 assert nav_ratio>=4.5,nav_ratio
 assert footer_ratio>=4.5,footer_ratio
 assert float(declarations('.page__title')['line-height'])>=1.15
-inner=Path('_site/natural-history/index.html').read_text(encoding='utf-8')
+inner=Path('_site/publications/index.html').read_text(encoding='utf-8')
 assert 'aria-label="Toggle navigation menu"' in inner
 assert '.greedy-nav button:focus-visible' in css
 home=Path('_site/index.html').read_text(encoding='utf-8')
