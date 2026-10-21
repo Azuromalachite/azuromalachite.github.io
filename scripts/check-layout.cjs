@@ -19,11 +19,14 @@ const server = http.createServer((req, res) => {
   const browser = await chromium.launch({ headless: true });
   try {
     const page = await browser.newPage();
-    await page.route('**/*', route => {
+    await page.route('**/*', async route => {
       const url = new URL(route.request().url());
       if (url.origin === origin) return route.continue();
       // Theme assets use the production absolute URL; serve the built copy locally.
-      if (url.hostname === 'azuromalachite.github.io') return route.continue({ url: origin + url.pathname + url.search });
+      if (url.hostname === 'azuromalachite.github.io') {
+        const response = await page.request.get(origin + url.pathname + url.search);
+        return route.fulfill({ response });
+      }
       return route.abort();
     });
     await page.goto(origin);
