@@ -48,3 +48,19 @@ jobs:
           grep -q 'Asia &amp; Oceania Review Sessions' _site/teaching/index.html
       - name: Check all excluded collection examples and retired assets
         run: python3 scripts/check-excluded.py
+      - name: Set up browser checks
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install browser check dependency
+        run: |
+          npm install --prefix /tmp/site-browser --no-package-lock playwright@1.56.1
+          /tmp/site-browser/node_modules/.bin/playwright install --with-deps chromium
+      - name: Check responsive rails, routes and print output
+        run: NODE_PATH=/tmp/site-browser/node_modules node scripts/check-layout.cjs
+      - name: Save rendered layout previews
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: layout-previews
+          path: local/layout-check/

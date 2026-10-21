@@ -33,6 +33,12 @@ Some original template examples remain in the repository for reference. They are
 
 ## Publishing updates
 
+Design decisions: no dark mode, no Publications item in the main navigation, no Thai translation layer, and replace theme pages before removing them. Publications remains reachable through both footers. Thesis figures and results stay private while reanalysis is ongoing.
+
+MathJax is opt-in with `mathjax: true` in a page's front matter; public pages currently need no math loader. Both layouts load `assets/css/print.css`. The publication list supplies print-only author text so closed author disclosures print reliably without JavaScript.
+
+The homepage rail uses `--rail` and `--rail-gap`, shared by section headings, practice titles and publication titles. CI runs `scripts/check-layout.cjs` with Playwright against the built site at ten widths from 320 to 1766 pixels, and checks print output, footer routes and absent math loaders. Layout screenshots and a publication PDF are saved as the `layout-previews` workflow artifact. To run locally after a Jekyll build, install Playwright and Chromium and run `node scripts/check-layout.cjs`.
+
 1. Create a working branch from the latest `master`.
 2. Edit the content and open a pull request into `master`.
 3. Wait for **Check website build / build** to pass, and review the changes.
