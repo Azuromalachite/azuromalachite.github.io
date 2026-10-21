@@ -27,7 +27,9 @@ This repository contains my personal website, covering microbiome engineering an
 
 Keep publication records and the BibTeX bibliography consistent, using the publisher's exact title, author list, and DOI. Upload full-text papers only when permission to share that version has been established. Give images descriptive alt text and appropriate captions and credits.
 
-The homepage and Research share an editorial frame; other inner pages currently retain Academic Pages. Set `selected_home: true` on a publication record to feature it on the homepage. Its year, title, venue, authorship role, and contribution or summary are read from that record; `homepage_title` can supply a shorter display title without changing the citation. The `research_theme` field groups records on Research (`protein-discovery` or `diagnostics`).
+The homepage, Research, Teaching, Natural History, Art & Biodesign and CV share the editorial frame. The four latter pages use `_layouts/editorial-page.html` and `assets/css/editorial-pages.css`: front matter supplies the introduction and section index; labelled sections retain each page's content. Publications and utility pages retain Academic Pages. Selected imagery can be added to the editorial pages when available; no stock substitutes or empty image placeholders are used.
+
+Set `selected_home: true` on a publication record to feature it on the homepage. Its year, title, venue, authorship role, and contribution or summary are read from that record; `homepage_title` can supply a shorter display title without changing the citation. The `research_theme` field groups records on Research (`protein-discovery` or `diagnostics`).
 
 Some original template examples remain in the repository for reference. They are excluded from publication in `_config.yml`. This README and the maintenance scripts are also excluded from the generated website.
 

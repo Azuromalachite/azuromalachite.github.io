@@ -1,15 +1,17 @@
 ---
-layout: single
+layout: editorial-page
 title: "Natural History"
 permalink: /natural-history/
-author_profile: true
+author_profile: false
 description: "Natural history work by Austin Wongsatit on Southeast Asian Amegilla bees, species identification, field observation, plant–pollinator interactions, and photography."
+display_title: "Natural History"
+eyebrow: "Organisms / environments / observation"
+intro: "Natural history has become a parallel strand of my scientific life. Observing organisms is a way of asking biological questions in their ecological and historical context: paying attention to variation, reconstructing relationships, and understanding where organisms live and how they interact."
+section_links: [{"id":"amegilla","label":"Blue-banded bees (Amegilla)"},{"id":"historical-context","label":"A problem nearly a century old"},{"id":"field-observation","label":"Field observation and photography"}]
 ---
 
-Natural history has become a parallel strand of my scientific life. Observing organisms is a way of asking biological questions in their ecological and historical context: paying attention to variation, reconstructing relationships, and understanding where organisms live and how they interact.
-
-## Blue-banded bees (*Amegilla*)
-
+<section class="editorial-section" id="amegilla" aria-labelledby="amegilla-title"><p class="editorial-section-label">01 / Blue-banded bees</p><div class="editorial-copy"><h2 id="amegilla-title">Blue-banded bees (<em>Amegilla</em>)</h2>
+{% capture section_body %}
 I work particularly on Southeast Asian blue-banded bees of the genus *Amegilla*. Through observations, photography, literature study, specimen comparisons, and ongoing conversations with wild-bee researchers in Thailand, including Natapot Warrit and Chawatat Thanoosing at Chulalongkorn University, I contribute to efforts to resolve difficult species identifications and taxonomic questions in the region.
 
 {% assign record = site.data.natural_history.amegilla_identifications %}
@@ -23,9 +25,11 @@ I work particularly on Southeast Asian blue-banded bees of the genus *Amegilla*.
 Identification work lets me compare photographic records across a wide geographic range, revisit difficult determinations, and connect field observations with historical literature and specimen comparisons.
 
 Taxonomy operates at a very different scale from molecular biology, but I find many of the underlying habits surprisingly similar: paying attention to variation, distinguishing meaningful signals from noise, and understanding organisms in their ecological and historical context.
+{% endcapture %}{{ section_body | markdownify }}
+</div></section>
 
-## A problem nearly a century old
-
+<section class="editorial-section" id="historical-context" aria-labelledby="historical-context-title"><p class="editorial-section-label">02 / Historical context</p><div class="editorial-copy"><h2 id="historical-context-title">A problem nearly a century old</h2>
+{% capture section_body %}
 The difficulty is not new. Many blue-banded bees now placed in *Amegilla* were historically classified under *Anthophora*, connecting the older literature directly with today's taxonomic questions ([Lieftinck, 1956](https://repository.naturalis.nl/pub/317723/ZV1956030001.pdf)). Writing about the *Anthophora zonata* group in 1929, Cedric Dover remarked that its taxonomy was already “in a very confused state,” and argued that:
 
 > “any attempt to provide more than a working classification seems to me to be futile without a very large series of specimens from all parts of their geographical range, and without extensive ecological and experimental observations.”
@@ -33,12 +37,16 @@ The difficulty is not new. Many blue-banded bees now placed in *Amegilla* were h
 *— Cedric Dover, 1929, [Wasps and Bees in the Raffles Museum, Singapore](https://lkcnhm.nus.edu.sg/app/uploads/2017/06/02brm043-070.pdf), Bulletin of the Raffles Museum 2: 43–70, p. 57.*
 
 Nearly a century later, that observation still captures much of what makes Southeast Asian *Amegilla* so interesting to me. Resolving these bees requires not only comparing morphology, but also assembling observations across geography, revisiting historical literature and specimens, and eventually connecting taxonomic variation with ecology.
+{% endcapture %}{{ section_body | markdownify }}
+</div></section>
 
-## Field observation and photography
-
+<section class="editorial-section" id="field-observation" aria-labelledby="field-observation-title"><p class="editorial-section-label">03 / Field practice</p><div class="editorial-copy"><h2 id="field-observation-title">Field observation and photography</h2>
+{% capture section_body %}
 Field observations and photographic records help connect identification with geographic variation, biodiversity, and plant–pollinator interactions. They also provide a way to return to an observation, compare it with other records, and ask better questions as an identification develops.
 
 I enjoy photographing nature, especially flowers, bees, and birds. Photography is a way of paying closer attention to organisms and their environments, and it connects my natural-history interests with visual observation and design.
 
 - [My observations and identifications on iNaturalist](https://www.inaturalist.org/people/austintw)
 - [My bird observations on eBird](https://ebird.org/profile/OTA2MjI5)
+{% endcapture %}{{ section_body | markdownify }}
+</div></section>

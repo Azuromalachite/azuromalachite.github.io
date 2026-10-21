@@ -68,6 +68,38 @@ const server = http.createServer((req, res) => {
       await page.setViewportSize({ width, height: 1000 });
       await page.screenshot({ path: `local/layout-check/home-${width}.png`, fullPage: true });
     }
+    for (const slug of ['teaching', 'natural-history', 'art-biodesign', 'cv']) {
+      await page.goto(origin + '/' + slug + '/');
+      assert.equal(await page.locator('h1').count(), 1, slug);
+      assert.equal(await page.locator('.site-nav a[aria-current="page"]').getAttribute('href'), '/' + slug + '/');
+      for (const link of await page.locator('.editorial-index a').all()) {
+        const target = await link.getAttribute('href');
+        assert.equal(await page.locator(target).count(), 1, `${slug}: broken section link ${target}`);
+      }
+      for (const width of [320, 390, 612, 900, 1440, 1766]) {
+        await page.setViewportSize({ width, height: 1000 });
+        assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false, `${slug} ${width}px: overflow`);
+        if (width > 600) {
+          const edges = await page.locator('.editorial-copy').evaluateAll(els => els.map(el => el.getBoundingClientRect().left));
+          assert.ok(Math.max(...edges) - Math.min(...edges) < 1, `${slug}: section rail drift`);
+        }
+        if ([390, 1440].includes(width)) await page.screenshot({ path: `local/layout-check/${slug}-${width}.png`, fullPage: true });
+      }
+      await page.setViewportSize({ width: 390, height: 1000 });
+      const menu = page.locator('.menu-toggle');
+      await menu.click();
+      assert.equal(await menu.getAttribute('aria-expanded'), 'true');
+      await page.keyboard.press('Escape');
+      assert.equal(await menu.getAttribute('aria-expanded'), 'false');
+      assert.equal(await menu.evaluate(el => el === document.activeElement), true);
+      await page.emulateMedia({ media: 'print' });
+      assert.equal(await page.locator('.site-header:visible, .site-footer:visible, .editorial-index:visible').count(), 0);
+      assert.equal(await page.locator('.editorial-section:visible').count(), await page.locator('.editorial-section').count());
+      await page.pdf({ path: `local/layout-check/${slug}.pdf`, format: 'A4', preferCSSPageSize: true });
+      await page.setViewportSize({ width: 794, height: 1123 });
+      await page.screenshot({ path: `local/layout-check/${slug}-print.png`, fullPage: true });
+      await page.emulateMedia({ media: 'screen' });
+    }
     console.log('Print authors, visible DOIs, footer routes, MathJax gating and navigation passed.');
   } finally { await browser.close(); }
 })().catch(error => { console.error(error); process.exitCode = 1; }).finally(() => server.close());

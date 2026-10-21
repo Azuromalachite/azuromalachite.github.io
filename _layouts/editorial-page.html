@@ -1,0 +1,15 @@
+---
+layout: editorial
+---
+<header class="editorial-hero{% if page.permalink == '/cv/' %} editorial-hero--cv{% endif %}">
+  <div>
+    <p class="eyebrow">{{ page.eyebrow | escape }}</p>
+    <h1>{{ page.display_title | default: page.title | escape }}</h1>
+    <div class="editorial-intro">{{ page.intro | markdownify }}</div>
+  </div>
+  <nav class="editorial-index" aria-label="On this page">
+    <p class="meta">On this page</p>
+    {% for section in page.section_links %}<a href="#{{ section.id }}">{{ section.label | escape }} <span aria-hidden="true">↓</span></a>{% endfor %}
+  </nav>
+</header>
+<div class="editorial-body{% if page.permalink == '/cv/' %} editorial-body--cv{% endif %}">{{ content }}</div>

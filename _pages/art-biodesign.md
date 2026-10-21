@@ -1,15 +1,17 @@
 ---
 description: "Art and biodesign collaborations by Austin Wongsatit, including Molecular Soundtrack, Intimacy with Nature, Happy Ending, Phantom Dining, and visual design."
-layout: single
+layout: editorial-page
 title: "Art, Biodesign & Collaborative Practice"
 permalink: /art-biodesign/
-author_profile: true
+author_profile: false
+display_title: "Art & Biodesign"
+eyebrow: "Molecular forms / collaboration / visual systems"
+intro: "Alongside scientific research and natural history, I have been involved in projects that bring biology into conversation with art, design, technology, and culture."
+section_links: [{"id":"molecular-soundtrack","label":"Molecular Soundtrack: Designing Proteins with IU's Song Titles"},{"id":"collaborations","label":"Collaborations"},{"id":"visual-design","label":"Visual design"}]
 ---
 
-Alongside scientific research and natural history, I have been involved in projects that bring biology into conversation with art, design, technology, and culture.
-
-## Molecular Soundtrack: Designing Proteins with IU's Song Titles
-
+<section class="editorial-section" id="molecular-soundtrack" aria-labelledby="molecular-soundtrack-title"><p class="editorial-section-label">01 / Molecular forms</p><div class="editorial-copy"><h2 id="molecular-soundtrack-title">Molecular Soundtrack: Designing Proteins with IU's Song Titles</h2>
+{% capture section_body %}
 I developed **Molecular Soundtrack: Designing Proteins with IU's Song Titles**, a project that treats proteins as a kind of nanoscale sculpture. Instead of translating music itself, I translated the words of IU's song titles into amino-acid sequences and explored their predicted structures.
 
 The project began from a small observation: IU's romanized alias, **DLWLRMA**, can itself be read as an amino-acid sequence. From there, song titles became a peculiar vocabulary for making molecular forms—predicted molecular forms at a scale normally invisible to us.
@@ -17,9 +19,11 @@ The project began from a small observation: IU's romanized alias, **DLWLRMA**, c
 For me, the project also became a quiet form of admiration. IU's songs have accompanied different moments of my life, so encoding fragments of them into proteins felt like making an unseen, molecular-scale tribute: something closer to a tiny private cheer than a monument.
 
 I first developed the idea as a workshop for **Intimacy with Nature** in Singapore in 2023. I returned to it for a talk in Shenzhen and at the Guangzhou Academy of Fine Arts in 2025.
+{% endcapture %}{{ section_body | markdownify }}
+</div></section>
 
-## Collaborations
-
+<section class="editorial-section" id="collaborations" aria-labelledby="collaborations-title"><p class="editorial-section-label">02 / Collaborative practice</p><div class="editorial-copy"><h2 id="collaborations-title">Collaborations</h2>
+{% capture section_body %}
 I began collaborating with artist **Henry Tan** in 2021 through **Happy Ending**, a speculative biodesign project developed during the Biodesign Sprint that explored biodegradability and end-of-life processes for plant-based electronic materials.
 
 ### Intimacy with Nature
@@ -31,9 +35,13 @@ Through my collaboration with artist Henry Tan, I became involved with the **FRE
 I have also occasionally contributed biological perspectives to projects led by other artists and designers. For **Phantom Dining**, an extended-reality participatory installation directed by Inhwa Yeom, I served as one of the project advisors. The work explores ingestion and consumption by placing participants in an ambiguous space between eater and eaten.
 
 These collaborations have expanded how I think about scientific communication and design. I am interested not only in explaining science clearly, but also in how art and design can create unfamiliar or speculative situations through which people encounter biological ideas differently.
+{% endcapture %}{{ section_body | markdownify }}
+</div></section>
 
-## Visual design
-
+<section class="editorial-section" id="visual-design" aria-labelledby="visual-design-title"><p class="editorial-section-label">03 / Visual systems</p><div class="editorial-copy"><h2 id="visual-design-title">Visual design</h2>
+{% capture section_body %}
 Visual design remains another part of this practice. I designed graphics and posters for **Get Rich with SynBio (รวยด้วย SynBio)** in 2021–2022, and I continue to be interested in scientific communication, information design, and visual systems.
 
 I tend to approach design in much the same way that I approach scientific systems: by starting with a deep review of the subject, identifying the underlying rules, relationships, and structures, and then allowing the visual language to emerge from that understanding. I am drawn to modular and grid-based structures, simple forms carrying dense information, and designs that reveal something of the process or apparatus behind them.
+{% endcapture %}{{ section_body | markdownify }}
+</div></section>
