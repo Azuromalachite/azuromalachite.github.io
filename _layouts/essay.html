@@ -1,0 +1,38 @@
+---
+layout: editorial
+---
+{% comment %}One frozen version of an essay. Versions and the record page are matched by `essay:`.{% endcomment %}
+{% assign family = site.essays | where: "essay", page.essay %}
+{% assign versions = family | where_exp: "doc", "doc.version" | sort: "version" %}
+{% assign latest = versions | last %}
+{% assign record = family | where_exp: "doc", "doc.version == nil" | first %}
+<header class="editorial-hero essay-hero">
+  <div>
+    <p class="eyebrow">Essay / preprint v{{ page.version }}</p>
+    <h1>{{ page.title | escape }}</h1>
+    {% if page.dek %}<div class="editorial-intro">{{ page.dek | markdownify }}</div>{% endif %}
+  </div>
+  <aside class="essay-status" aria-label="Version">
+    <p class="meta">Version {{ page.version }} of {{ latest.version }} · <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%-d %B %Y' }}</time></p>
+    {% if page.version < latest.version %}
+    <p class="essay-status__notice">A newer version exists. <a href="{{ latest.url | relative_url }}">Read v{{ latest.version }}</a></p>
+    {% else %}
+    <p>This is the latest version.</p>
+    {% endif %}
+    <a href="{{ record.url | relative_url }}">All versions and what changed</a>
+  </aside>
+</header>
+<div class="editorial-body">
+  {% if page.errata %}
+  <aside class="essay-errata" role="note" aria-label="Errata">
+    <p class="meta">Errata</p>
+    {% for erratum in page.errata %}<div class="essay-errata__item"><time datetime="{{ erratum.date | date: '%Y-%m-%d' }}">{{ erratum.date | date: '%-d %B %Y' }}</time>{{ erratum.note | markdownify }}</div>{% endfor %}
+  </aside>
+  {% endif %}
+  <section class="editorial-section essay-text" aria-label="Essay text"><p class="editorial-section-label">Text / v{{ page.version }}</p><div class="editorial-copy">{{ content }}</div></section>
+  <section class="editorial-section" id="cite" aria-labelledby="cite-title"><p class="editorial-section-label">Cite</p><div class="editorial-copy">
+    <h2 id="cite-title">Cite this version</h2>
+    <p class="essay-citation">{{ site.author.name }} ({{ page.date | date: '%Y' }}). {{ page.title | escape }} (version {{ page.version }}). <a href="{{ page.url | absolute_url }}">{{ page.url | absolute_url }}</a>{% if record.doi %}. DOI: <a href="https://doi.org/{{ record.doi }}">{{ record.doi }}</a>{% endif %}</p>
+    <p>Versions are frozen once published: this text will not change. Corrections appear as errata above, and revisions as new versions.</p>
+  </div></section>
+</div>

@@ -2,6 +2,7 @@
 from pathlib import Path
 from html.parser import HTMLParser
 import json
+import re
 import struct
 import xml.etree.ElementTree as ET
 
@@ -29,6 +30,10 @@ routes=['/','/research/','/natural-history/','/publications/','/cv/','/art-biode
         '/publications/2020-cas13-clinical-validation/', '/publications/2022-metagenomic-pet-hydrolase/',
         '/publications/2023-multiplexed-cas13-diagnostics/', '/publications/2024-pet-recycling-upcycling-review/',
         '/publications/2025-recombinase-condensates/']
+# Published essay record pages join the sitemap; their frozen versions stay out (check-essays.py).
+for record in sorted(Path('_essays').glob('*/index.md')):
+    if not re.search(r'^published:\s*false\s*$',record.read_text(encoding='utf-8'),re.M):
+        routes.append(f'/essays/{record.parent.name}/')
 profiles={'https://scholar.google.com/citations?user=ejfOOWAAAAAJ&hl=en',
           'https://www.linkedin.com/in/thanakrit-wongsatit-59a540125/',
           'https://github.com/Azuromalachite','https://bsky.app/profile/austintw.bsky.social'}

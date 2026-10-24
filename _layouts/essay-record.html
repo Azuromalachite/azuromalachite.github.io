@@ -1,0 +1,38 @@
+---
+layout: editorial
+---
+{% comment %}The stable page for an essay: abstract, latest version and full version history.{% endcomment %}
+{% assign versions = site.essays | where: "essay", page.essay | where_exp: "doc", "doc.version" | sort: "version" %}
+{% assign latest = versions | last %}
+<header class="editorial-hero essay-hero">
+  <div>
+    <p class="eyebrow">Essay / {{ versions.size }} version{% if versions.size != 1 %}s{% endif %}</p>
+    <h1>{{ page.title | escape }}</h1>
+    <div class="editorial-intro">{{ page.abstract | markdownify }}</div>
+  </div>
+  <aside class="essay-status" aria-label="Latest version">
+    <p class="meta">Latest · v{{ latest.version }} · <time datetime="{{ latest.date | date: '%Y-%m-%d' }}">{{ latest.date | date: '%-d %B %Y' }}</time></p>
+    <a class="essay-status__primary" href="{{ latest.url | relative_url }}">Read the latest version</a>
+  </aside>
+</header>
+<div class="editorial-body">
+  {% assign about = content | strip %}
+  {% if about != "" %}<section class="editorial-section" aria-label="About this essay"><p class="editorial-section-label">About</p><div class="editorial-copy">{{ content }}</div></section>{% endif %}
+  <section class="editorial-section" id="versions" aria-labelledby="versions-title"><p class="editorial-section-label">Versions</p><div class="editorial-copy">
+    <h2 id="versions-title">Version history</h2>
+    <ol class="essay-versions" reversed>
+      {% assign newest_first = versions | reverse %}
+      {% for version in newest_first %}
+      <li>
+        <p><a href="{{ version.url | relative_url }}">Version {{ version.version }}</a> · <time datetime="{{ version.date | date: '%Y-%m-%d' }}">{{ version.date | date: '%-d %B %Y' }}</time>{% if forloop.first %} · latest{% endif %}{% if version.errata %} · {{ version.errata.size }} erratum{% if version.errata.size != 1 %}s{% endif %}{% endif %}</p>
+        {% if version.changes %}<ul>{% for change in version.changes %}<li>{{ change | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>{% endfor %}</ul>{% endif %}
+      </li>
+      {% endfor %}
+    </ol>
+  </div></section>
+  <section class="editorial-section" id="cite" aria-labelledby="cite-title"><p class="editorial-section-label">Cite</p><div class="editorial-copy">
+    <h2 id="cite-title">Cite this essay</h2>
+    <p class="essay-citation">{{ site.author.name }} ({{ latest.date | date: '%Y' }}). {{ page.title | escape }}. <a href="{{ page.url | absolute_url }}">{{ page.url | absolute_url }}</a>{% if page.doi %}. DOI: <a href="https://doi.org/{{ page.doi }}">{{ page.doi }}</a>{% endif %}</p>
+    <p>This address always leads to the latest version. To cite the exact text you read, use the address of that version.</p>
+  </div></section>
+</div>

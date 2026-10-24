@@ -180,6 +180,7 @@ exclude:
   - _pages/year-archive.html
   - markdown_generator
   - talkmap
+  - ESSAYS.md
   - files/paper1.pdf
   - files/paper2.pdf
   - files/paper3.pdf
@@ -270,6 +271,11 @@ collections:
   talks:
     output: true
     permalink: /:collection/:path/
+  # Versioned essays: _essays/<slug>/index.md is the record page, vN.md are frozen versions.
+  # See ESSAYS.md before publishing or revising one.
+  essays:
+    output: true
+    permalink: /:collection/:path/
 
 
 # These settings control how pages and collections are included in the site
@@ -332,6 +338,14 @@ defaults:
       layout: talk
       author_profile: true
       share: true
+  # _essays: frozen versions stay out of the sitemap; each record page opts back in.
+  - scope:
+      path: ""
+      type: essays
+    values:
+      layout: essay
+      author_profile: false
+      sitemap: false
 
 
 # Sass/SCSS
