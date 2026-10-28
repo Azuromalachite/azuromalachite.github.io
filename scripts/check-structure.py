@@ -31,7 +31,7 @@ class Structure(HTMLParser):
 def page(route):
     parser=Structure();parser.feed((Path('_site')/route.lstrip('/')/'index.html').read_text(encoding='utf-8'));return parser
 
-expected=[('/', 'About'),('/research/','Research'),('/natural-history/','Natural History'),('/art-biodesign/','Art & Biodesign'),('/teaching/','Teaching & Community'),('/cv/','CV')]
+expected=[('/', 'About'),('/research/','Research'),('/natural-history/','Natural History'),('/art-biodesign/','Art & Biodesign'),('/teaching/','Teaching & Community'),('/blog/','Blog'),('/cv/','CV')]
 home=page('/')
 assert home.first_heading=='h1'
 assert '/publications/' in home.links
@@ -81,7 +81,9 @@ assert published.count('<strong>Co-first author</strong>')==2
 assert 'I contributed microscopy image processing and analysis.' in published
 cv=page('/cv/')
 assert '/teaching/' in cv.links and '/natural-history/' in cv.links and '/publications/' in cv.links
-for route in ['teaching','natural-history','art-biodesign','cv']:
+posts=sorted(path.parent.name for path in Path('_site/blog').glob('*/index.html'))
+assert posts,'No blog posts rendered'
+for route in ['teaching','natural-history','art-biodesign','cv','blog']+['blog/'+slug for slug in posts]:
     html=(Path('_site')/route/'index.html').read_text(encoding='utf-8')
     parsed=page('/'+route+'/')
     assert parsed.first_heading=='h1' and len(re.findall(r'<h1\b',html))==1,route
@@ -90,4 +92,13 @@ for route in ['teaching','natural-history','art-biodesign','cv']:
     assert '/assets/css/main.css' not in html and 'author__avatar' not in html,route
     assert 'class="editorial-section"' in html,route
     assert '{{' not in html and '{%' not in html,route
-print('Navigation, parallel homepage teasers, research-publication links, art hierarchy, and CV cross-links passed.')
+blog=page('/blog/')
+assert all('/blog/'+slug+'/' in blog.links for slug in posts),blog.links
+for slug in posts:
+    html=(Path('_site/blog')/slug/'index.html').read_text(encoding='utf-8')
+    # Every note marker has its note, and every note links back to its marker.
+    refs=re.findall(r'href="#note-(\d+)"',html);backs=re.findall(r'href="#note-ref-(\d+)"',html)
+    assert refs==backs==[str(n) for n in range(1,len(refs)+1)],(slug,refs,backs)
+    for n in refs:assert f'id="note-{n}"' in html and f'id="note-ref-{n}"' in html,(slug,n)
+    assert '/blog/' in page('/blog/'+slug+'/').links,slug
+print(f'Navigation, parallel homepage teasers, research-publication links, art hierarchy, CV cross-links and {len(posts)} blog post(s) passed.')

@@ -1,0 +1,24 @@
+---
+layout: editorial
+---
+<header class="editorial-hero">
+  <div>
+    <p class="eyebrow">{{ page.eyebrow | escape }}</p>
+    <h1>{{ page.display_title | default: page.title | escape }}</h1>
+    <div class="editorial-intro">{{ page.intro | markdownify }}</div>
+  </div>
+  <div class="editorial-index">
+    <p class="meta">{{ site.posts.size }} {% if site.posts.size == 1 %}post{% else %}posts{% endif %}</p>
+    <a href="{{ '/feed.xml' | relative_url }}">Subscribe by RSS <span aria-hidden="true">↗</span></a>
+  </div>
+</header>
+<section class="editorial-section" aria-labelledby="posts-title"><p class="editorial-section-label">Posts</p><div class="editorial-copy"><h2 class="visually-hidden" id="posts-title">Posts</h2>
+<ol class="blog-list">{% for post in site.posts %}
+  <li class="blog-list-item">
+    <p class="meta"><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%-d %B %Y' }}</time>{% if post.topics %} · {{ post.topics | join: ' · ' | escape }}{% endif %}</p>
+    <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+    {% if post.description %}<p>{{ post.description | escape }}</p>{% endif %}
+  </li>{% endfor %}
+</ol>
+</div></section>
+{{ content }}

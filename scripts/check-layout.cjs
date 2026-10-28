@@ -41,7 +41,7 @@ const server = http.createServer((req, res) => {
       assert.equal(metrics.overflow, false, `${width}px: horizontal overflow`);
       console.log(`${width}px: heading, practice and publication content share one rail`);
     }
-    for (const route of ['/', '/research/', '/natural-history/', '/art-biodesign/', '/teaching/', '/cv/', '/publications/']) {
+    for (const route of ['/', '/research/', '/natural-history/', '/art-biodesign/', '/teaching/', '/blog/', '/cv/', '/publications/']) {
       await page.goto(origin + route);
       assert.equal(await page.locator('script[src*="mathjax"], script[src*="polyfill"]').count(), 0, route);
       assert.ok(await page.locator('footer a[href$="/publications/"]').count(), `Missing footer route: ${route}`);
@@ -100,6 +100,28 @@ const server = http.createServer((req, res) => {
       await page.screenshot({ path: `local/layout-check/${slug}-print.png`, fullPage: true });
       await page.emulateMedia({ media: 'screen' });
     }
-    console.log('Print authors, visible DOIs, footer routes, MathJax gating and navigation passed.');
+    await page.goto(origin + '/blog/');
+    assert.equal(await page.locator('.site-nav a[aria-current="page"]').getAttribute('href'), '/blog/');
+    const posts = await page.locator('.blog-list a').evaluateAll(els => els.map(el => new URL(el.href).pathname));
+    assert.ok(posts.length > 0, 'Blog index lists no posts');
+    for (const route of ['/blog/', ...posts]) {
+      await page.goto(origin + route);
+      assert.equal(await page.locator('h1').count(), 1, route);
+      for (const link of await page.locator('.note-ref a, .blog-note-back').all()) {
+        const target = await link.getAttribute('href');
+        assert.equal(await page.locator(target).count(), 1, `${route}: broken note link ${target}`);
+      }
+      const name = route === '/blog/' ? 'blog' : 'blog-' + route.split('/').filter(Boolean).pop();
+      for (const width of [320, 390, 612, 900, 1440, 1766]) {
+        await page.setViewportSize({ width, height: 1000 });
+        assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false, `${route} ${width}px: overflow`);
+        if (width > 600) {
+          const edges = await page.locator('.editorial-copy').evaluateAll(els => els.map(el => el.getBoundingClientRect().left));
+          assert.ok(Math.max(...edges) - Math.min(...edges) < 1, `${route}: section rail drift`);
+        }
+        if ([390, 1440].includes(width)) await page.screenshot({ path: `local/layout-check/${name}-${width}.png`, fullPage: true });
+      }
+    }
+    console.log('Print authors, visible DOIs, footer routes, MathJax gating, navigation and blog pages passed.');
   } finally { await browser.close(); }
 })().catch(error => { console.error(error); process.exitCode = 1; }).finally(() => server.close());
