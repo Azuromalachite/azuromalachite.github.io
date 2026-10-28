@@ -28,7 +28,9 @@ class Head(HTMLParser):
 routes=['/','/research/','/natural-history/','/publications/','/cv/','/art-biodesign/','/teaching/',
         '/publications/2020-cas13-clinical-validation/', '/publications/2022-metagenomic-pet-hydrolase/',
         '/publications/2023-multiplexed-cas13-diagnostics/', '/publications/2024-pet-recycling-upcycling-review/',
-        '/publications/2025-recombinase-condensates/']
+        '/publications/2025-recombinase-condensates/','/blog/']
+# Blog posts are real content: each must carry the same metadata and appear in the sitemap.
+routes+=sorted('/blog/'+path.parent.name+'/' for path in (SITE/'blog').glob('*/index.html'))
 profiles={'https://scholar.google.com/citations?user=ejfOOWAAAAAJ&hl=en',
           'https://www.linkedin.com/in/thanakrit-wongsatit-59a540125/',
           'https://github.com/Azuromalachite','https://bsky.app/profile/austintw.bsky.social'}

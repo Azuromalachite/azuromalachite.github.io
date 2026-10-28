@@ -1,0 +1,25 @@
+---
+layout: editorial
+---
+{% assign words = content | strip_html | number_of_words %}{% assign minutes = words | divided_by: site.words_per_minute | at_least: 1 %}
+<article class="blog-post">
+<header class="editorial-hero blog-hero">
+  <div>
+    <p class="eyebrow"><a href="{{ '/blog/' | relative_url }}">Blog</a>{% if page.eyebrow %} / {{ page.eyebrow | escape }}{% endif %}</p>
+    <h1>{{ page.title | escape }}</h1>
+  </div>
+  <dl class="blog-facts">
+    <div><dt>Published</dt><dd><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%-d %B %Y' }}</time></dd></div>
+    <div><dt>Reading time</dt><dd>{{ minutes }} min</dd></div>
+    {% if page.topics %}<div><dt>Topics</dt><dd>{{ page.topics | join: ' · ' | escape }}</dd></div>{% endif %}
+  </dl>
+</header>
+{% if page.illustration %}<figure class="blog-illustration">{% include illustrations/{{ page.illustration }}.svg %}</figure>{% endif %}
+<section class="editorial-section" aria-label="Text"><p class="editorial-section-label">Text</p><div class="editorial-copy blog-copy">{{ content }}</div></section>
+{% if page.notes %}
+<section class="editorial-section" id="notes" aria-labelledby="notes-title"><p class="editorial-section-label">Notes</p><div class="editorial-copy"><h2 class="visually-hidden" id="notes-title">Notes</h2>
+<ol class="blog-notes">{% for note in page.notes %}<li id="note-{{ forloop.index }}">{{ note | markdownify | remove: '<p>' | remove: '</p>' | strip }} <a class="blog-note-back" href="#note-ref-{{ forloop.index }}" aria-label="Back to text for note {{ forloop.index }}">↩&#xFE0E;</a></li>{% endfor %}</ol>
+</div></section>
+{% endif %}
+<p class="blog-end"><a href="{{ '/blog/' | relative_url }}">← All posts</a></p>
+</article>
