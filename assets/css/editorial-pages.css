@@ -55,6 +55,12 @@
 .visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .blog-hero h1{max-width:16ch}
 .blog-hero .eyebrow a{text-decoration:none}
+.blog-illustration{margin:0 0 56px}
+.blog-illustration__art{display:block;width:100%;height:auto;overflow:visible}
+.blog-illustration__art *{vector-effect:non-scaling-stroke}
+.ill-ink{stroke:var(--ink);stroke-width:1.2}.ill-heavy{stroke-width:1.6}
+.ill-muted{stroke:var(--muted);stroke-width:1}.ill-ghost{stroke:var(--muted);stroke-width:1;opacity:.45}
+.ill-store{fill:var(--green)}
 .blog-facts{align-self:end;border-left:1px solid var(--line);padding-left:25px;margin:0}
 .blog-facts dt{font:10px/1.7 var(--mono);text-transform:uppercase;letter-spacing:.055em;color:var(--muted)}
 .blog-facts dd{font-size:14px;margin:2px 0 0}.blog-facts div+div{margin-top:16px}

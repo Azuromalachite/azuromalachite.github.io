@@ -1,0 +1,39 @@
+<svg class="blog-illustration__art" viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="illustration-title">
+  <title id="illustration-title">A bacterium packed with storage granules. A line leads from it towards several faint, branching paths. The granules travel along the line while the cell's outline breaks up and disappears. Above, a small circle is followed by a faint square and then a solid one.</title>
+  <g fill="none" stroke-linecap="round">
+    <!-- A future with a clue: the first sugar already carries a ghost of the second. -->
+    <path class="ill-muted" d="M150 66 H470"/>
+    <ellipse class="ill-ink" cx="170" cy="66" rx="7.4" ry="7"/>
+    <rect class="ill-ghost" x="214" y="59" width="14" height="14" stroke-dasharray="3 4" transform="rotate(4 221 66)"/>
+    <rect class="ill-ink" x="443" y="59" width="14" height="14" transform="rotate(-3 450 66)"/>
+
+    <!-- The saver. -->
+    <rect class="ill-ink ill-heavy" x="80" y="160" width="320" height="140" rx="70" transform="rotate(-1.5 240 230)"/>
+
+    <!-- Time, then futures with no clue. -->
+    <path class="ill-ink" d="M402 232 H900"/>
+    <path class="ill-muted" d="M900 232 C980 232 1040 150 1190 138"/>
+    <path class="ill-muted" d="M900 232 C960 232 1050 205 1190 200"/>
+    <path class="ill-muted" d="M900 232 C960 232 1050 262 1190 270" opacity=".75"/>
+    <path class="ill-muted" d="M900 232 C990 232 1050 330 1190 344" opacity=".55"/>
+
+    <!-- The outline does not carry on cleanly. -->
+    <rect class="ill-ink" x="470" y="175" width="240" height="114" rx="57" opacity=".45" stroke-dasharray="70 14 34 24 52 18"/>
+    <rect class="ill-muted" x="764" y="187" width="168" height="90" rx="45" opacity=".4" stroke-dasharray="16 30 8 46 22 60"/>
+  </g>
+  <g class="ill-store">
+    <!-- Granules are slightly uneven, as stored granules are. -->
+    <ellipse cx="150" cy="214" rx="22" ry="20" transform="rotate(12 150 214)"/>
+    <ellipse cx="214" cy="252" rx="17" ry="15.5"/>
+    <ellipse cx="262" cy="198" rx="14" ry="13" transform="rotate(-20 262 198)"/>
+    <ellipse cx="318" cy="240" rx="19" ry="17.5" transform="rotate(30 318 240)"/>
+    <ellipse cx="360" cy="204" rx="10" ry="9.3"/>
+    <ellipse cx="168" cy="270" rx="9" ry="8.4"/>
+    <!-- What was saved keeps going. -->
+    <ellipse cx="562" cy="232" rx="12.5" ry="11.6"/>
+    <ellipse cx="648" cy="232" rx="10" ry="9.4" transform="rotate(25 648 232)"/>
+    <ellipse cx="846" cy="232" rx="9" ry="8.3"/>
+    <ellipse cx="1015" cy="218" rx="8" ry="7.4"/>
+    <ellipse cx="1094" cy="261" rx="7" ry="6.5" opacity=".8"/>
+  </g>
+</svg>

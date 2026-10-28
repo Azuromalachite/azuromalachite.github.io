@@ -2,6 +2,7 @@
 title: "Saving for a Future You Might Not See"
 description: "Some soil bacteria store carbon as PHB granules. A single-cell study shows when that reserve pays off: not when nutrients are plentiful, but when conditions change."
 eyebrow: "Microbial strategy"
+illustration: carried-forward
 topics: ["Microbiology", "Evolution"]
 notes:
   - "The strongest evidence came from evolution running in reverse. *E. coli* lines grown for 500 generations on lactose, with no maltose ever following it, lost the lactose-triggered maltose response. Mitchell et al. tested strains that had been evolved earlier by Oxman, Alon and Dekel."
