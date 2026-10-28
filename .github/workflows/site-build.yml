@@ -15,6 +15,10 @@ jobs:
     steps:
       - name: Check out website
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # the essay check compares published versions with the base commit
+      - name: Check essay numbering and that published versions are unchanged
+        run: python3 scripts/check-essays.py source "${{ github.event.pull_request.base.sha || github.event.before }}"
       - name: Build with GitHub Pages Jekyll
         uses: actions/jekyll-build-pages@v1
       - name: Check rendered search metadata and sitemap
@@ -48,6 +52,27 @@ jobs:
           grep -q 'Asia &amp; Oceania Review Sessions' _site/teaching/index.html
       - name: Check all excluded collection examples and retired assets
         run: python3 scripts/check-excluded.py
+      - name: Check essays on the live build
+        run: python3 scripts/check-essays.py rendered _site
+      - name: Copy the site with the example essay published
+        run: |
+          mkdir -p local/essay-example
+          tar --exclude=./.git --exclude=./_site --exclude=./local -cf - . | tar -xf - -C local/essay-example
+          sed -i 's/^published: false$/published: true/' local/essay-example/_essays/example-essay/*.md
+      - name: Build the copy with the example essay
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: local/essay-example
+          destination: local/essay-example/_site
+      - name: Check the example essay renders
+        working-directory: local/essay-example
+        run: python3 scripts/check-essays.py rendered _site
+      - name: Save the rendered example essay
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: essay-example
+          path: local/essay-example/_site/
       - name: Set up browser checks
         uses: actions/setup-node@v4
         with:

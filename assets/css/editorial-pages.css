@@ -51,6 +51,19 @@
   .editorial-copy h3,.editorial-body--cv .editorial-copy h3{font-size:12pt;margin:12pt 0 7pt}
   .editorial-copy p,.editorial-copy li,.editorial-body--cv .editorial-copy p,.editorial-body--cv .editorial-copy li{font-size:10pt;line-height:1.5;max-width:none;margin-bottom:8pt}
 }
+/* Versioned essays (_layouts/essay.html, _layouts/essay-record.html) */
+.essay-status{align-self:end;border-left:1px solid var(--line);padding-left:25px;font-size:14px;line-height:1.6}
+.essay-status .meta{color:var(--muted);margin:0 0 14px;font:11px/1.7 var(--mono);text-transform:uppercase;letter-spacing:.05em}
+.essay-status p{margin:0 0 12px}
+.essay-status__notice{border-left:2px solid var(--green);padding-left:12px}
+.essay-status__primary{display:inline-block;border:1px solid var(--ink);padding:8px 14px}
+.essay-errata{border-block:1px solid var(--green);padding:18px 0;margin:0 0 34px;max-width:76ch}
+.essay-errata .meta{font:11px/1.7 var(--mono);text-transform:uppercase;letter-spacing:.05em;color:var(--green);margin:0 0 10px}
+.essay-errata time{font:12px/1.7 var(--mono);color:var(--muted)}
+.essay-versions{padding-left:22px;margin:0}.essay-versions>li{margin-bottom:24px}
+.essay-citation{font-family:var(--serif)}
+@media(max-width:860px){.essay-status{border-left:0;border-top:1px solid var(--line);padding:18px 0 0}}
+@media print{.essay-status__primary{display:none}}
 /* Blog: index and posts reuse the editorial hero, rail and copy column. */
 .visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .blog-hero h1{max-width:16ch}
