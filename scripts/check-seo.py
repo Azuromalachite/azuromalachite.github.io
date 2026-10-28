@@ -29,7 +29,9 @@ class Head(HTMLParser):
 routes=['/','/research/','/natural-history/','/publications/','/cv/','/art-biodesign/','/teaching/',
         '/publications/2020-cas13-clinical-validation/', '/publications/2022-metagenomic-pet-hydrolase/',
         '/publications/2023-multiplexed-cas13-diagnostics/', '/publications/2024-pet-recycling-upcycling-review/',
-        '/publications/2025-recombinase-condensates/']
+        '/publications/2025-recombinase-condensates/','/blog/']
+# Blog posts are real content: each must carry the same metadata and appear in the sitemap.
+routes+=sorted('/blog/'+path.parent.name+'/' for path in (SITE/'blog').glob('*/index.html'))
 # Published essay record pages join the sitemap; their frozen versions stay out (check-essays.py).
 for record in sorted(Path('_essays').glob('*/index.md')):
     if not re.search(r'^published:\s*false\s*$',record.read_text(encoding='utf-8'),re.M):

@@ -285,17 +285,14 @@ defaults:
       path: "googlee44ab5cc8b243c39.html"
     values:
       sitemap: false
-  # _posts
+  # _posts: blog posts share the editorial frame and live under /blog/
   - scope:
       path: ""
       type: posts
     values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
+      layout: blog-post
+      permalink: /blog/:title/
+      author_profile: false
   # _pages
   - scope:
       path: ""

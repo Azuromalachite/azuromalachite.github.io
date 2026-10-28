@@ -16,7 +16,7 @@
 </script>
 
 <!-- For all browsers -->
-{% assign editorial_layouts = 'home-editorial,editorial,editorial-page,essay,essay-record' | split: ',' %}
+{% assign editorial_layouts = 'home-editorial,editorial,editorial-page,blog-index,blog-post,essay,essay-record' | split: ',' %}
 {% if editorial_layouts contains page.layout %}
 <link rel="stylesheet" href="{{ '/assets/css/home.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 {% if page.layout != 'home-editorial' and page.layout != 'editorial' %}<link rel="stylesheet" href="{{ '/assets/css/editorial-pages.css' | relative_url }}?v={{ site.time | date: '%s' }}">{% endif %}

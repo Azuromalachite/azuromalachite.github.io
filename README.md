@@ -18,6 +18,8 @@ This repository contains my personal website, covering microbiome engineering an
 | Art and biodesign | [`_pages/art-biodesign.md`](_pages/art-biodesign.md) |
 | Teaching and community | [`_pages/teaching.html`](_pages/teaching.html) |
 | CV | [`_pages/cv.md`](_pages/cv.md) |
+| Blog index | [`_pages/blog.md`](_pages/blog.md), [`_layouts/blog-index.html`](_layouts/blog-index.html) |
+| Blog posts | [`_posts/`](_posts/), [`_layouts/blog-post.html`](_layouts/blog-post.html) |
 | Publication records | [`_publications/`](_publications/) |
 | Publication list layout | [`_pages/publications.html`](_pages/publications.html) |
 | Downloadable bibliography | [`files/publications.bib`](files/publications.bib) |
@@ -28,6 +30,8 @@ This repository contains my personal website, covering microbiome engineering an
 Keep publication records and the BibTeX bibliography consistent, using the publisher's exact title, author list, and DOI. Upload full-text papers only when permission to share that version has been established. Give images descriptive alt text and appropriate captions and credits.
 
 The homepage, Research, Teaching, Natural History, Art & Biodesign and CV share the editorial frame. The four latter pages use `_layouts/editorial-page.html` and `assets/css/editorial-pages.css`: front matter supplies the introduction and section index; labelled sections retain each page's content. Publications and utility pages retain Academic Pages. Selected imagery can be added to the editorial pages when available; no stock substitutes or empty image placeholders are used.
+
+The blog uses the same frame. A post is `_posts/YYYY-MM-DD-slug.md` and is published at `/blog/slug/`. Its front matter takes `title`, `description` (the index summary and search description), and optionally `eyebrow`, `topics` and `notes`. Each entry in `notes` is Markdown and becomes note N; mark it in the text with `<sup class="note-ref"><a href="#note-N" id="note-ref-N" aria-label="Note N">N</a></sup>`, numbering the markers in reading order. A paragraph followed by `{: .blog-coda}` is set as a closing line. The build checks new posts automatically: metadata, sitemap, note links, and layout at every tested width. The template's example posts remain excluded in `_config.yml`.
 
 Set `selected_home: true` on a publication record to feature it on the homepage. Its year, title, venue, authorship role, and contribution or summary are read from that record; `homepage_title` can supply a shorter display title without changing the citation. The `research_theme` field groups records on Research (`protein-discovery` or `diagnostics`).
 
