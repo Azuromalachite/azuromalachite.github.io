@@ -60,7 +60,9 @@
 .blog-facts dd{font-size:14px;margin:2px 0 0}.blog-facts div+div{margin-top:16px}
 .blog-copy p{font-size:18px;line-height:1.75;max-width:66ch}
 .note-ref{font:11px/0 var(--mono);vertical-align:super;margin-left:1px}
-.note-ref a{text-decoration:none;color:var(--green);padding:0 2px}
+.note-ref a{text-decoration:none;color:var(--green);padding:0 2px;position:relative}
+/* A 24px tap target (WCAG 2.5.8) without changing how the marker looks. */
+.note-ref a::after{content:"";position:absolute;inset:-8px -7px}
 .blog-copy .blog-coda{font-family:var(--serif);font-size:clamp(24px,2.4vw,30px);line-height:1.45;letter-spacing:-.02em;margin-top:40px;max-width:30ch}
 .blog-notes{padding-left:24px;margin:0;max-width:70ch}
 .blog-notes li{font-size:15px;line-height:1.7;margin-bottom:16px;scroll-margin-top:32px}

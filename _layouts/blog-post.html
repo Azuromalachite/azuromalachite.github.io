@@ -17,7 +17,7 @@ layout: editorial
 <section class="editorial-section" aria-label="Text"><p class="editorial-section-label">Text</p><div class="editorial-copy blog-copy">{{ content }}</div></section>
 {% if page.notes %}
 <section class="editorial-section" id="notes" aria-labelledby="notes-title"><p class="editorial-section-label">Notes</p><div class="editorial-copy"><h2 class="visually-hidden" id="notes-title">Notes</h2>
-<ol class="blog-notes">{% for note in page.notes %}<li id="note-{{ forloop.index }}">{{ note | markdownify | remove: '<p>' | remove: '</p>' | strip }} <a class="blog-note-back" href="#note-ref-{{ forloop.index }}" aria-label="Back to text for note {{ forloop.index }}">↩</a></li>{% endfor %}</ol>
+<ol class="blog-notes">{% for note in page.notes %}<li id="note-{{ forloop.index }}">{{ note | markdownify | remove: '<p>' | remove: '</p>' | strip }} <a class="blog-note-back" href="#note-ref-{{ forloop.index }}" aria-label="Back to text for note {{ forloop.index }}">↩&#xFE0E;</a></li>{% endfor %}</ol>
 </div></section>
 {% endif %}
 <p class="blog-end"><a href="{{ '/blog/' | relative_url }}">← All posts</a></p>
