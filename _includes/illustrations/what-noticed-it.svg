@@ -1,0 +1,50 @@
+<svg class="blog-illustration__art" viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="illustration-title">
+  <title id="illustration-title">A lens high on the right. Two sight lines run down and outwards from it and stop at a long horizontal ground line without crossing it. Below the line, a faint dashed disk, with four faint arcs rising from it towards the surface. Sitting on the surface directly above the disk is a close row of filled granules, fading out at both ends; further along the line, well apart from them, a few granules drawn as empty outlines.</title>
+  <g fill="none" stroke-linecap="round">
+    <!-- The eye. High and off to one side: a camera on a roof as readily as one on a drone. -->
+    <circle class="ill-ink ill-heavy" cx="1044" cy="74" r="34"/>
+    <circle class="ill-ink" cx="1044" cy="74" r="14"/>
+    <path class="ill-muted" d="M1044 26 V4"/>
+    <path class="ill-muted" d="M1090 40 L1108 22"/>
+    <path class="ill-muted" d="M998 40 L980 22"/>
+
+    <!-- Sight lines. They stop at the ground. Nothing here looks through it. -->
+    <path class="ill-ink" d="M1013 100 L104 288"/>
+    <path class="ill-ink" d="M1062 107 L892 288"/>
+
+    <!-- The ground. -->
+    <path class="ill-ink ill-heavy" d="M60 290 H1140"/>
+
+    <!-- What is actually being looked for. Buried, and drawn as the camera has it: not there. -->
+    <ellipse class="ill-ghost" cx="440" cy="372" rx="64" ry="15" stroke-dasharray="6 8"/>
+
+    <!-- It travels up, not sideways. -->
+    <path class="ill-muted" d="M440 357 C440 338 432 318 428 298" opacity=".6"/>
+    <path class="ill-muted" d="M440 357 C448 338 458 320 462 298" opacity=".55"/>
+    <path class="ill-muted" d="M438 359 C412 347 380 328 358 300" opacity=".35"/>
+    <path class="ill-muted" d="M442 359 C470 347 504 330 526 300" opacity=".3"/>
+
+    <!-- Bacteria that are there and have noticed nothing. Same cast, same size, no fill. -->
+    <circle class="ill-ink" cx="146" cy="275" r="13"/>
+    <circle class="ill-ink" cx="192" cy="275" r="13"/>
+    <circle class="ill-ink" cx="238" cy="275" r="13"/>
+    <circle class="ill-ink" cx="702" cy="275" r="13"/>
+    <circle class="ill-ink" cx="748" cy="275" r="13"/>
+    <circle class="ill-ink" cx="794" cy="275" r="13"/>
+    <circle class="ill-ink" cx="840" cy="275" r="13"/>
+  </g>
+  <g class="ill-store">
+    <!-- The layer that noticed. Closest-packed over the disk, thinning at both ends. -->
+    <circle cx="302" cy="275" r="13" opacity=".4"/>
+    <circle cx="330" cy="275" r="13" opacity=".62"/>
+    <circle cx="358" cy="275" r="13" opacity=".82"/>
+    <circle cx="386" cy="275" r="13"/>
+    <circle cx="414" cy="275" r="13"/>
+    <circle cx="442" cy="275" r="13"/>
+    <circle cx="470" cy="275" r="13"/>
+    <circle cx="498" cy="275" r="13"/>
+    <circle cx="526" cy="275" r="13" opacity=".82"/>
+    <circle cx="554" cy="275" r="13" opacity=".62"/>
+    <circle cx="582" cy="275" r="13" opacity=".4"/>
+  </g>
+</svg>
